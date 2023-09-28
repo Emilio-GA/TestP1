@@ -4,45 +4,67 @@
  */
 package Practica1;
 
+
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
 public class GameState {
-    private String labyrinthv;
-    private String players;
-    private String monsters;
-    private int currentPlayer;
-    private Boolean winner;
-    private String log;
+    
+    private static String labyrinthv;
+    private static String players;
+    private static String monsters;
+    private static int currentPlayer;
+    private static Boolean winner;
+    private static String log;
     
     public GameState (String inilab,  String inipla, String inimon, int inicur, Boolean iniwi, String inilo){
-     labyrinthv = inilab;
-     players = inipla;
-     monsters = inimon;
-     currentPlayer = inicur;
-     winner = iniwi;
-     log = inilo;
+        
+        labyrinthv = inilab;
+        players = inipla;
+        monsters = inimon;
+        currentPlayer = inicur;
+        winner = iniwi;
+        log = inilo;
     }
     
-    public String getLabyrinthv() {
-    return labyrinthv;
-}
-    public String getPlayers() {
-    return players;
-}
-    public String getMonsters() {
-    return monsters;
-}
-    public String getLog() {
-    return log;
-}   
-    public int getCurrentPlayer() {
-    return currentPlayer;
-}     
-    public Boolean getWinner() {
-    return winner;
-}    
     
+    // METODOS
+    public String getLabyrinthv() {
+    
+        return labyrinthv;
+    
+    }
+    
+    
+    public String getPlayers() {
+    
+        return players;
+    
+    }
+    
+    
+    public String getMonsters() {
+    
+        return monsters;
+    }
+    
+    
+    public String getLog() {
+    
+        return log;
+    }   
+    
+    
+    public int getCurrentPlayer() {
+    
+        return currentPlayer;
+    }  
+    
+    
+    public Boolean getWinner() {
+    
+        return winner;
+    }    
     
 }

@@ -44,7 +44,10 @@ public class TestP1 {
        Shield sh = new Shield(5, 4);
        System.out.println(sh.protect());
        System.out.println(sh.toString());
-       
+       sh.protect();
+       sh.protect();
+       while (sh.discard()){};
+               
        
        // Clase Dice
        

@@ -8,13 +8,16 @@ package practica1;
  *
  * @author egalv
  */
-public class Practica1 {
+public class TestP1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
+       System.out.println("primera salida");
+       System.out.println("segunda salida");
+       
     }
     
 }

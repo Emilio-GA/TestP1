@@ -24,10 +24,21 @@ public class TestP1 {
         
         System.out.println(GameCharacter.MONSTER);
         System.out.println(GameCharacter.PLAYER);
-
         
+        System.out.println(Orientation.HORIZONTAL);
+        System.out.println(Orientation.VERTICAL);
+    
+        
+      
         // Clase weapon
-        
+       Weapon hacha= new Weapon (5 ,4)  ;
+       System.out.println(hacha.attack());
+       System.out.println(hacha.toString());
+       hacha.attack();
+       hacha.attack();
+       while (hacha.discard()){};
+       
+
        
        // Clase shield
        Shield sh = new Shield(5, 4);

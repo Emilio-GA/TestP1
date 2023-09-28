@@ -16,7 +16,7 @@ public class Weapon {
     
     
     // Constructor
-    Weapon (float p, int u) {
+    public Weapon (float p, int u) {
         
         power = p;
         uses = u;

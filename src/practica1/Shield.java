@@ -4,20 +4,25 @@
  */
 package Practica1;
 
+
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
 public class Shield {
-    private float protection;
-    private int uses;
+    
+    private static float protection;
+    private static int uses;
     
     public Shield (float valorpro, int valoru){
+        
         protection = valorpro;
         uses = valoru;
     }
     
-    public float protect (){
+    
+    // METODOS
+    public static float protect (){
         if (uses > 0){
             uses--;
             return protection;
@@ -27,7 +32,9 @@ public class Shield {
         
     }
     
+    
     public String toString(){        
+        
         return  "S[" + String.valueOf(protection) + "," + String.valueOf(uses)+ "]";
     }
     

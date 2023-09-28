@@ -112,7 +112,7 @@ public class Dice {
         
         boolean discard;
         
-        if (generator.nextFloat() < 1.0 * (MAX_USES - usesLeft()) / MAX_USES) {
+        if (generator.nextFloat() < 1.0 * (MAX_USES - usesLeft) / MAX_USES) {
             
             discard = true;
         

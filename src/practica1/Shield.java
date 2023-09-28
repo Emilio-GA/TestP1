@@ -30,4 +30,9 @@ public class Shield {
     public String toString(){        
         return  "S[" + String.valueOf(protection) + "," + String.valueOf(uses)+ "]";
     }
+    
+    public static boolean discard() {
+        
+        return Dice.discardElement(uses);
+    }
 }

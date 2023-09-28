@@ -11,8 +11,8 @@ package Practica1;
  */
 public class Shield {
     
-    private float protection;
-    private int uses;
+    private static float protection;
+    private static int uses;
     
     public Shield (float valorpro, int valoru){
         
@@ -21,7 +21,8 @@ public class Shield {
     }
     
     
-    public float protect (){
+    // METODOS
+    public static float protect (){
         if (uses > 0){
             uses--;
             return protection;

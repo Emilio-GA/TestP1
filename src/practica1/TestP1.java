@@ -26,14 +26,13 @@ public class TestP1 {
         System.out.println(GameCharacter.PLAYER);
 
         
-        
-        
-      
         // Clase weapon
-       ;
-       System.out.println("segunda salida");
+        
        
        // Clase shield
+       Shield sh = new Shield(5, 4);
+       System.out.println(sh.protect());
+       System.out.println(sh.toString());
        
        
        // Clase Dice

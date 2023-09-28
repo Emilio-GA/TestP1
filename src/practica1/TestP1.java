@@ -47,7 +47,14 @@ public class TestP1 {
        
        
        // Clase Dice
+       Dice dado = new Dice();
        
+       for (int i = 1; i <= 100; i ++) {
+           
+            
+        
+           
+       }
     }
     
 }

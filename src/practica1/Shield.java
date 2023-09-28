@@ -14,6 +14,7 @@ public class Shield {
     private static float protection;
     private static int uses;
     
+    
     public Shield (float valorpro, int valoru){
         
         protection = valorpro;
@@ -23,10 +24,14 @@ public class Shield {
     
     // METODOS
     public static float protect (){
+        
         if (uses > 0){
+            
             uses--;
             return protection;
-        }else{
+        
+        } else{
+            
             return 0;
         }
         
@@ -35,8 +40,9 @@ public class Shield {
     
     public String toString(){        
         
-        return  "S[" + String.valueOf(protection) + "," + String.valueOf(uses)+ "]";
+        return "S[" + String.valueOf(protection) + "," + String.valueOf(uses)+ "]";
     }
+    
     
     public static boolean discard() {
         

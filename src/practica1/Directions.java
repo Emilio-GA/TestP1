@@ -4,8 +4,9 @@
  */
 package Practica1;
 
+
 /**
- *
- * @author egalv
+ * @author Alberto Rodríguez Fernańdez
+ * @author Emilio Guillén Alvarez 
  */
-public enum Directions { LEFT , RIGHT, UP , DOWN}
+public enum Directions { LEFT , RIGHT, UP , DOWN }

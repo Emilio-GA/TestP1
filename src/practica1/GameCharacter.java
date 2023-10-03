@@ -9,7 +9,4 @@ package Practica1;
  * @author Alberto Rodríguez Fernańdez
  * @author Emilio Guillén Alvarez 
  */
-public enum GameCharacter {
-    
-    PLAYER, MONSTER
-}
+public enum GameCharacter { PLAYER, MONSTER } 

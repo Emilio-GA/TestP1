@@ -9,7 +9,4 @@ package Practica1;
  * @author Alberto Rodríguez Fernańdez
  * @author Emilio Guillén Alvarez 
  */
-public enum Orientation {
-    
-    VERTICAL, HORIZONTAL
-}
+public enum Orientation { VERTICAL, HORIZONTAL }

@@ -28,7 +28,7 @@ public class TestP1 {
         System.out.println(Orientation.HORIZONTAL);
         System.out.println(Orientation.VERTICAL);
     
-        System.out.println("Tu mama");
+        
       
         // Clase weapon
        Weapon hacha= new Weapon (5 ,4)  ;
@@ -50,14 +50,63 @@ public class TestP1 {
                
        
        // Clase Dice
-       Dice dado = new Dice();
        
+       System.out.println("numeros ramdon del 0 al 100");
        for (int i = 1; i <= 100; i ++) {
-           
-            
-        
-           
+          System.out.println(Dice.randomPos(100));           
        }
+    
+    
+       System.out.println("jugador empieza");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.whoStarts(2));           
+        }
+       
+       
+       System.out.println("inteligencia y fuerza");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.randomIntelligence());
+          System.out.println(Dice.randomStrength()); 
+        }
+       System.out.println("Revive");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.resurrectPlayer());
+        }
+       System.out.println("Premios");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.weaponsReward());
+          System.out.println(Dice.shieldsReward());
+          System.out.println(Dice.healthReward());
+        }       
+       System.out.println("Poder");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.weaponPower());
+          System.out.println(Dice.shieldPower());
+         
+        }
+       System.out.println("Usos");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.usesLeft());
+                   
+        }
+       System.out.println("Intensidad");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.usesLeft());
+                   
+        }
+              System.out.println("DESCARTES");
+       for (int i = 1; i <= 100; i ++) {
+          System.out.println(Dice.discardElement(4));
+                   
+        }
+       
+       
+       
     }
+    
+    
+       
+       
+    
     
 }

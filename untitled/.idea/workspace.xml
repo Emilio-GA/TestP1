@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50a2edeb-562e-4b8d-ae9d-4843316b84c5" name="Changes" comment="PRUEBA">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/practica1/TestP1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/practica1/TestP1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="50a2edeb-562e-4b8d-ae9d-4843316b84c5" name="Changes" comment="PRUEBA" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696269347059</updated>
       <workItem from="1696269348284" duration="180000" />
-      <workItem from="1696348116079" duration="1821000" />
+      <workItem from="1696348116079" duration="2304000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <option name="closed" value="true" />

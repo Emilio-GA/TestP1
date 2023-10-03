@@ -13,15 +13,15 @@ import java.util.Random;
  */
 public class Dice {
     
-    private static int MAX_USES;
-    private static float MAX_INTELLIGENCE;
-    private static float MAX_STRENGTH;
-    private static float RESURRECT_PROB;
-    private static int WEAPONS_REWARD;
-    private static int SHIELDS_REWARD;
-    private static int HEALTH_REWARD;
-    private static int MAX_ATTACK;
-    private static int MAX_SHIELD;
+    private static int MAX_USES = 5;
+    private static float MAX_INTELLIGENCE = 10.0f;
+    private static float MAX_STRENGTH = 10.0f;
+    private static float RESURRECT_PROB = 0.3f;
+    private static int WEAPONS_REWARD = 2;
+    private static int SHIELDS_REWARD = 3;
+    private static int HEALTH_REWARD = 5;
+    private static int MAX_ATTACK = 3;
+    private static int MAX_SHIELD = 2;
     private static Random generator = new Random();
     
     

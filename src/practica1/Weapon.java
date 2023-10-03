@@ -10,6 +10,8 @@ package Practica1;
  * @author Alberto Rodríguez Fernańdez
  * @author Emilio Guillén Alvarez 
  */
+
+// CLASE QUE REPRESENTA LAS ARMAS QUE USA EL JUGADOR EN LOS ATAQUES DURANTE LOS COMBATES
 public class Weapon {
     
     
@@ -17,11 +19,11 @@ public class Weapon {
     private static float power;
     
     
-    // USOS DE UN JUGADOR PARA JUGAR ARMAS
+    // USOS DE UN JUGADOR PARA LAS ARMAS
     private static int uses;
     
     
-    // Constructor
+    // CONSTRUCTOR
     public Weapon (float p, int u) {
         
         power = p;
@@ -57,7 +59,7 @@ public class Weapon {
     }
     
     
-    // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADO
+    // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADA
     public static boolean discard() {
         
         return Dice.discardElement(uses);

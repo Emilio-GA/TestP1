@@ -4,10 +4,14 @@
  */
 package Practica1;
 
+
+
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
+// CLASE MAIN
 public class TestP1 {
 
     /**
@@ -16,7 +20,7 @@ public class TestP1 {
     public static void main(String[] args) {
         
         
-        // clases enum
+        // Clases enum
         System.out.println(Directions.DOWN);
         System.out.println(Directions.LEFT);
         System.out.println(Directions.RIGHT);
@@ -29,84 +33,84 @@ public class TestP1 {
         System.out.println(Orientation.VERTICAL);
     
         
-      
-        // Clase weapon
-       Weapon hacha= new Weapon (5 ,4)  ;
-       System.out.println(hacha.attack());
-       System.out.println(hacha.toString());
-       hacha.attack();
-       hacha.attack();
-       while (hacha.discard()){};
+        // Clase Weapon
+        Weapon hacha= new Weapon (5 ,4)  ;
+        System.out.println(hacha.attack());
+        System.out.println(hacha.toString());
+        hacha.attack();
+        hacha.attack();
+        while (hacha.discard()){};
        
-
-       
-       // Clase shield
-       Shield sh = new Shield(5, 4);
-       System.out.println(sh.protect());
-       System.out.println(sh.toString());
-       sh.protect();
-       sh.protect();
-       while (sh.discard()){};
+        
+        // Clase Shield
+        Shield sh = new Shield(5, 4);
+        System.out.println(sh.protect());
+        System.out.println(sh.toString());
+        sh.protect();
+        sh.protect();
+        while (sh.discard()){};
                
        
-       // Clase Dice
-       
-       System.out.println("numeros ramdon del 0 al 100");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.randomPos(100));           
-       }
-    
-    
-       System.out.println("jugador empieza");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.whoStarts(2));           
+        // Clase Dice
+        System.out.println("numeros ramdon del 0 al 100");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.randomPos(100));           
         }
-       
-       
-       System.out.println("inteligencia y fuerza");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.randomIntelligence());
-          System.out.println(Dice.randomStrength()); 
+
+
+        System.out.println("jugador empieza");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.whoStarts(2));           
         }
-       System.out.println("Revive");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.resurrectPlayer());
+
+
+        System.out.println("inteligencia y fuerza");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.randomIntelligence());
+           System.out.println(Dice.randomStrength()); 
         }
-       System.out.println("Premios");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.weaponsReward());
-          System.out.println(Dice.shieldsReward());
-          System.out.println(Dice.healthReward());
-        }       
-       System.out.println("Poder");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.weaponPower());
-          System.out.println(Dice.shieldPower());
-         
+        
+        
+        System.out.println("Revive");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.resurrectPlayer());
         }
-       System.out.println("Usos");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.usesLeft());
-                   
+        
+        
+        System.out.println("Premios");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.weaponsReward());
+           System.out.println(Dice.shieldsReward());
+           System.out.println(Dice.healthReward());
+        }  
+        
+        
+        System.out.println("Poder");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.weaponPower());
+           System.out.println(Dice.shieldPower());
+
         }
-       System.out.println("Intensidad");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.usesLeft());
-                   
+        
+        
+        System.out.println("Usos");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.usesLeft());
+
         }
-              System.out.println("DESCARTES");
-       for (int i = 1; i <= 100; i ++) {
-          System.out.println(Dice.discardElement(4));
-                   
+        
+        
+        System.out.println("Intensidad");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.usesLeft());
+
         }
-       
-       
-       
+        
+        
+        System.out.println("DESCARTES");
+        for (int i = 1; i <= 100; i ++) {
+           System.out.println(Dice.discardElement(4));
+
+        }
     }
-    
-    
-       
-       
-    
-    
 }

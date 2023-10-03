@@ -5,13 +5,19 @@
 package Practica1;
 
 
+
 /**
  * @author Alberto Rodríguez Fernańdez
  * @author Emilio Guillén Alvarez 
  */
 public class Weapon {
     
+    
+    // PODER DEL JUGADOR
     private static float power;
+    
+    
+    // USOS DE UN JUGADOR PARA JUGAR ARMAS
     private static int uses;
     
     
@@ -21,9 +27,11 @@ public class Weapon {
         power = p;
         uses = u;
     }
+        
     
-    
-    // Metodos
+    /* MÉTODO QUE REPRESENTAN LA INTENSIDAD DEL ATAQUE DEL JUGADOR. SI EL ARMA
+       TIENE USOS DISPONIBLES (USES > 0), SE DECREMENTA EL VALOR DE USOS Y SE
+       DEVUELVE EL VALOR DE POWER. SI NO TIENE USOS LA ARMA SE DEVUELVE 0 */
     public static float attack() {
         
         float sol;
@@ -42,12 +50,14 @@ public class Weapon {
     }
     
     
+    // MÉTODO QUE DA EL PODER Y LOS USOS QUE TENDRÁ UN ARMA EN FORMATO TEXTO
     public String toString() {
         
         return "W[" + String.valueOf(power) + ", " + Integer.toString(uses) + "]";
     }
     
     
+    // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADO
     public static boolean discard() {
         
         return Dice.discardElement(uses);

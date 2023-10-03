@@ -28,7 +28,7 @@ public class TestP1 {
         System.out.println(Orientation.HORIZONTAL);
         System.out.println(Orientation.VERTICAL);
     
-        
+        System.out.println("Tu mama");
       
         // Clase weapon
        Weapon hacha= new Weapon (5 ,4)  ;

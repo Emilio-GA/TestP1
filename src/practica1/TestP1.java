@@ -119,10 +119,6 @@ public class TestP1 {
         System.out.println(GameState.getLog());
         System.out.println(GameState.getCurrentPlayer());
         
-        
-
-        
-        
     }
 }
 

@@ -23,7 +23,7 @@ public class Monster {
         
         this.name = name;
         this.intelligence = intelligence;
-        this.stength = strenght;
+        this.stength = strength;
     }
     
     

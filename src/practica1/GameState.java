@@ -52,7 +52,7 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE LABERINTO
-    public String getLabyrinthv() {
+    public static String getLabyrinthv() {
     
         return labyrinthv;
     
@@ -60,7 +60,7 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE JUGADORES
-    public String getPlayers() {
+    public static String getPlayers() {
     
         return players;
     
@@ -68,28 +68,28 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE MONSTRUOS
-    public String getMonsters() {
+    public static String getMonsters() {
     
         return monsters;
     }
     
     
     // METODO CONSULTOR DE LA VARIABLE REGISTRO
-    public String getLog() {
+    public static String getLog() {
     
         return log;
     }   
     
     
     // METODO CONSULTOR DE LA VARIABLE JUGADOR ACTUAL
-    public int getCurrentPlayer() {
+    public static int getCurrentPlayer() {
     
         return currentPlayer;
     }  
     
     
     // METODO CONSULTOR DE LA VARIABLE BOOLEANA DEL GANADOR
-    public Boolean getWinner() {
+    public static Boolean getWinner() {
     
         return winner;
     }    

@@ -110,6 +110,19 @@ public class TestP1 {
            System.out.println(Dice.discardElement(4));
 
         }
+        
+        // Clase GameState
+        GameState gs = new GameState("Laberinto", "EA", "Monster", 5, false, "log");
+        System.out.println(GameState.getLabyrinthv());
+        System.out.println(GameState.getPlayers());
+        System.out.println(GameState.getMonsters());
+        System.out.println(GameState.getLog());
+        System.out.println(GameState.getCurrentPlayer());
+        
+        
+        System.out.println("Rezemos para que esto te salga nene");
+        
+        
     }
 }
 

@@ -120,7 +120,7 @@ public class TestP1 {
         System.out.println(GameState.getCurrentPlayer());
         
         
-        System.out.println("Rezemos para que esto te salga nene");
+
         
         
     }

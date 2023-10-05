@@ -112,12 +112,12 @@ public class TestP1 {
         }
         
         // Clase GameState
-        GameState gs = new GameState("Laberinto", "EA", "Monster", 5, false, "log");
-        System.out.println(GameState.getLabyrinthv());
-        System.out.println(GameState.getPlayers());
-        System.out.println(GameState.getMonsters());
-        System.out.println(GameState.getLog());
-        System.out.println(GameState.getCurrentPlayer());
+        GameState gs= new GameState("Laberinto", "EA", "Monster", 5, false, "log");
+        System.out.println(gs.getLabyrinthv());
+        System.out.println(gs.getPlayers());
+        System.out.println(gs.getMonsters());
+        System.out.println(gs.getLog());
+        System.out.println(gs.getCurrentPlayer());
         
     }
 }

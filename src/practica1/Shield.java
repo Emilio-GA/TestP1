@@ -16,11 +16,11 @@ public class Shield {
     
     
     // PROTECCION DEL JUGADOR
-    private static float protection;
+    private float protection;
     
     
     // USO DE UN JUGADOR PARA LOS ESCUDOS
-    private static int uses;
+    private int uses;
     
     
     // CONSTRUCTOR
@@ -32,7 +32,7 @@ public class Shield {
     
     
     // METODO QUE REPRESENTA LA INTENSIDAD DE LA DEFENSA DEL JUGADOR
-    public static float protect (){
+    public float protect (){
         
         if (uses > 0){
             
@@ -55,7 +55,7 @@ public class Shield {
     
     
     // MÉTODO QUE DECIDE SI UN ESCUDO DEBE SER DESCARTADO
-    public static boolean discard() {
+    public boolean discard() {
         
         return Dice.discardElement(uses);
     }

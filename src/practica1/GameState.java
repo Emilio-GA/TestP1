@@ -16,27 +16,27 @@ public class GameState {
     
     
     // VARIABLE QUE REPRESENTA LABERINTO
-    private static String labyrinthv;
+    private String labyrinthv;
     
     
     // VARIABLE QUE REPRESENTA JUGADORES
-    private static String players;
+    private String players;
     
     
     // VARIABLE QUE REPRESENTA MONSTRUOS
-    private static String monsters;
+    private String monsters;
     
     
     // VARIABLE QUE REPRESENTA AL JUGADOR ACTUAL
-    private static int currentPlayer;
+    private int currentPlayer;
     
     
     // VARIABLE BOOLEANA DEL GANADOR
-    private static Boolean winner;
+    private Boolean winner;
     
     
     // VARIABLE QUE REPRESENTA REGISTRO
-    private static String log;
+    private String log;
     
     
     // CONSTRUCTOR 
@@ -52,7 +52,7 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE LABERINTO
-    public static String getLabyrinthv() {
+    public String getLabyrinthv() {
     
         return labyrinthv;
     
@@ -60,7 +60,7 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE JUGADORES
-    public static String getPlayers() {
+    public String getPlayers() {
     
         return players;
     
@@ -68,28 +68,28 @@ public class GameState {
     
     
     // METODO CONSULTOR DE LA VARIABLE MONSTRUOS
-    public static String getMonsters() {
+    public String getMonsters() {
     
         return monsters;
     }
     
     
     // METODO CONSULTOR DE LA VARIABLE REGISTRO
-    public static String getLog() {
+    public String getLog() {
     
         return log;
     }   
     
     
     // METODO CONSULTOR DE LA VARIABLE JUGADOR ACTUAL
-    public static int getCurrentPlayer() {
+    public int getCurrentPlayer() {
     
         return currentPlayer;
     }  
     
     
     // METODO CONSULTOR DE LA VARIABLE BOOLEANA DEL GANADOR
-    public static Boolean getWinner() {
+    public Boolean getWinner() {
     
         return winner;
     }    

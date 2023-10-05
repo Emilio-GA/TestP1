@@ -16,11 +16,11 @@ public class Weapon {
     
     
     // PODER DEL JUGADOR
-    private static float power;
+    private float power;
     
     
     // USOS DE UN JUGADOR PARA LAS ARMAS
-    private static int uses;
+    private int uses;
     
     
     // CONSTRUCTOR
@@ -34,7 +34,7 @@ public class Weapon {
     /* MÉTODO QUE REPRESENTAN LA INTENSIDAD DEL ATAQUE DEL JUGADOR. SI EL ARMA
        TIENE USOS DISPONIBLES (USES > 0), SE DECREMENTA EL VALOR DE USOS Y SE
        DEVUELVE EL VALOR DE POWER. SI NO TIENE USOS LA ARMA SE DEVUELVE 0 */
-    public static float attack() {
+    public float attack() {
         
         float sol;
         
@@ -60,7 +60,7 @@ public class Weapon {
     
     
     // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADA
-    public static boolean discard() {
+    public boolean discard() {
         
         return Dice.discardElement(uses);
     }

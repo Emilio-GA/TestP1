@@ -59,7 +59,7 @@ public class Labyrinth {
     
     
     // CONSTRUCTOR
-    Labyrinth(int row, int co, int eRow, int eCol) {
+    Labyrinth(int nRows, int nCols, int exitRow, int exitCol) {
         
         
     }
@@ -75,6 +75,113 @@ public class Labyrinth {
     // METODO HAVEAWINNER
     boolean haveAWinner() {
         
+
+    }  
+
+    
+    // METODO STRING
+    String toString() {
+
         
-    }      
-}
+    }
+    
+    
+    // METODO ADMONSTER
+    void addMonster(int row, int col, Monster monster) {
+        
+        
+    }
+    
+    
+    // METODO PUTPLAYER
+    Monster putPlayer(Directions direction, Player player) {
+        
+        
+    }
+        
+
+    // METODO ADDBLOCK
+    void addBlock(Orientation orientation, int startRow, int startCol, int length) {
+        
+        
+    }
+    
+    
+    // METODO VALIDMOVES
+    Directions[] validMoves(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO POSOK
+    boolean posOK(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO EMPTYPOS
+    boolean emptyPos(int row, int col) {
+        
+        
+        
+    }
+    
+    
+    // METODO MOSTERPOS
+    boolean monsterPos(int row, int col) {
+        
+        
+        
+    }
+    
+    
+    // METODO EXITPOS
+    boolean exitPos(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO COMBATPOS
+    boolean combatPos(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO CANSTEPON
+    boolean canStepOn(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO UPDATEOLDPOS
+    void updateOldPos(int row, int col) {
+        
+        
+    }
+    
+    
+    // METODO DIR2POS
+    int[] dir2Pos(int row, int col, Directions direction) {
+        
+        
+    }
+    
+    
+    // METODO RANDOMEMPTYPOS
+    int[] randomEmptyPos() {
+        
+        
+    }
+    
+    
+    // METODO MONSTER
+    Monster putPlayer2D(int oldRow, int oldCol, int row, int col, Player player) {
+        
+        
+    }
+ }

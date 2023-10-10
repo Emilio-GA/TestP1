@@ -4,17 +4,15 @@
  */
 package practica1;
 
-
-
 /**
  *
  * @author egalv
  */
-public class MonsterSquare {
-    
+public class PlayerSquare {
     private int row;
     
     private int col;
     
-    
+  
+     
 }

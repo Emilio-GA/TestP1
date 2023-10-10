@@ -48,7 +48,7 @@ public class Monster {
     //Lista de monstruos;
     private static ArrayList <Monster> monsters; 
     
-    private static MonsterSquare nose;
+   // private static MonsterSquare nose;
     
      
     

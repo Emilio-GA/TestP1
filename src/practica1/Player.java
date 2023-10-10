@@ -72,6 +72,11 @@ public class Player {
     //Lista de escudos
     private static ArrayList <Shield> shields; 
     
+        
+    
+
+    
+    
     
     //constructor
     public Player (char number, float intelligence, float strength){
@@ -88,7 +93,10 @@ public class Player {
     void resurrect(){
     this.resetHits();
     health = INITIAL_HEALTH;
-    // NO SE PONER A CERO LAS LISTAS DE ARMAS Y ESCUDOS
+   
+    weapons.clear();
+    shields.clear();
+    
     }
         
     
@@ -125,7 +133,7 @@ public class Player {
     }
     
     
-    Directions move(Directions direction, Directions[] validMoves){}
+    //Directions move(Directions direction, Directions[] validMoves){}
     
     float attack(){
         return strength+this.sumWeapons();
@@ -133,9 +141,11 @@ public class Player {
     
     
     
-    boolean defend(float receivedAttack){
-    return this.manageHit(receivedAttack);
-    }
+  //  boolean defend(float receivedAttack){
+        
+   // return this.manageHit(receivedAttack);
+    
+   // }
     
     
     
@@ -172,13 +182,20 @@ public class Player {
     }
     
     float sumWeapons(){
-        
-        
+        float suma=0;
+        for (int i= 0 ; i < weapons.size(); i++){
+            suma += weapons.get(i).attack();
+        }
+        return suma;
     }
     
     
     float sumShields(){
-    
+        float suma=0;
+        for (int i= 0 ; i < shields.size(); i++){
+            suma += shields.get(i).protect();
+        }
+        return suma;    
     
     }
     
@@ -186,7 +203,7 @@ public class Player {
      return intelligence+this.sumShields();
     }
     
-    boolean manageHit(float receivedAttack){}
+    //boolean manageHit(float receivedAttack){}
     
     void resetHits(){
         consecutiveHits = 0;

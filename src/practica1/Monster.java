@@ -4,6 +4,8 @@
  */
 package Practica1;
 
+import java.util.ArrayList;
+
 
 
 /**
@@ -43,6 +45,15 @@ public class Monster {
     private int col;
     
     
+    //Lista de monstruos;
+    private static ArrayList <Monster> monsters; 
+    
+    private static MonsterSquare nose;
+    
+     
+    
+    
+    
     // CONSTRUCTOR
     public Monster (String name, float intelligence, float strength){
         
@@ -55,41 +66,50 @@ public class Monster {
     // METODO DEAD
     boolean dead() {
         
-        
+        if (health == 0){
+           return true;
+        }else{
+           return false;
+        }
+       
     }
     
     
     // METODO ATTACK
     float attack() {
         
-        
+        return Dice.intensity(strength);
     }
     
     
     // METODO DEFEND
-    boolean defend(float receivedAttack) {
+   // boolean defend(float receivedAttack) {
         
         
-    }
+ //   }
     
     
     // METODO SETPOS
-    void setPos(int row, int col) {
+    void setPos(int row, int col){
         
-        
+        this.row = row;
+        this.col = col;
     }
+   
     
     
     // METODO TOSTRING
-    String toString() {
-        
-        
+    public String toString() {
+        return "M[ "+ name + ",  Intelligence: " + String.valueOf(intelligence) + 
+        ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
+        ", Row and Col" + Integer.toString(row) + ", " + Integer.toString(col)  + " ]";
     }
+          
     
     
     // METODO GOTWOUNDED
     void gotWounded() {
-        
+        health--;
         
     }
 }

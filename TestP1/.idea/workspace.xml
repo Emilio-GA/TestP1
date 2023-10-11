@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a2edeb-562e-4b8d-ae9d-4843316b84c5" name="Changes" comment="PRUEBA">
-      <change afterPath="$PROJECT_DIR$/.idea/TestP1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dice.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/directions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/practica1/TestP1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/practica1/TestP1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/prueba.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestP1.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/egalv/Desktop/UNI3/Nueva carpeta/Practica1/TestP1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,6 +89,7 @@
       <workItem from="1696269348284" duration="180000" />
       <workItem from="1696348116079" duration="4677000" />
       <workItem from="1696357381636" duration="7008000" />
+      <workItem from="1697014419475" duration="870000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <option name="closed" value="true" />

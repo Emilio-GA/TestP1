@@ -48,7 +48,7 @@ public class Monster {
     //Lista de monstruos;
     private static ArrayList <Monster> monsters; 
     
-   // private static MonsterSquare nose;
+
     
      
     
@@ -63,7 +63,7 @@ public class Monster {
     }
     
     
-    // METODO DEAD
+    // METODO DEAD comprueba si esta muerto
     boolean dead() {
         
         if (health == 0){
@@ -75,7 +75,7 @@ public class Monster {
     }
     
     
-    // METODO ATTACK
+    // METODO ATTACK utiliza el dado 
     float attack() {
         
         return Dice.intensity(strength);
@@ -89,7 +89,7 @@ public class Monster {
  //   }
     
     
-    // METODO SETPOS
+    // METODO SETPOS 
     void setPos(int row, int col){
         
         this.row = row;

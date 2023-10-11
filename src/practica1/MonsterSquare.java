@@ -12,8 +12,11 @@ package practica1;
  */
 public class MonsterSquare {
     
+    //FILA
     private int row;
     
+    
+    //COLUMNA
     private int col;
     
     

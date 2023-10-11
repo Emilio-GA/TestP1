@@ -101,29 +101,29 @@ public class Player {
         
     
     
-    
+    // devolver fila
     int getRow(){
         return row;
     }
     
-    
+    // devolver columna
     int getCol(){
         return col;
     }
     
-    
+    // devolver numero del jugador
     char getNumber(){
         return number;    
     }
     
-    
+    // Establecer una posición
     void setPos(int row, int col){
         this.row = row;
         this.col = col;
         
     }
     
-    
+    // comprovar si esta muerto
     boolean dead(){
         if (health == 0){
            return true;
@@ -135,6 +135,8 @@ public class Player {
     
     //Directions move(Directions direction, Directions[] validMoves){}
     
+    
+    // Devuelve fuerza del ataque
     float attack(){
         return strength+this.sumWeapons();
     }
@@ -152,7 +154,7 @@ public class Player {
     void receiveReward(){}
     
     
-    
+    // METODO TOSTRING
     public String toString() {
         return "Player[ "+ name +" , Number: "+ number + ",  Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
@@ -167,6 +169,7 @@ public class Player {
     void receiveShield (Shield s){}
     
     
+    // GENERA UN ARMA 
     Weapon newWeapon(){
         Weapon hacha = new Weapon(Dice.weaponPower(), Dice.usesLeft());
         
@@ -174,6 +177,8 @@ public class Player {
         
     }
     
+    
+    // GENERA UN ESCUDO
     Shield newShield() {
         
         Shield escudo = new Shield(Dice.shieldPower(), Dice.usesLeft());
@@ -181,6 +186,8 @@ public class Player {
         return escudo;
     }
     
+    
+    // SUMA LA FUERZA DE TODAS LAS ARMAS
     float sumWeapons(){
         float suma=0;
         for (int i= 0 ; i < weapons.size(); i++){
@@ -190,6 +197,7 @@ public class Player {
     }
     
     
+    // SUMA LA PROTECCIÓN DE TODOS LOS ESCUDOS
     float sumShields(){
         float suma=0;
         for (int i= 0 ; i < shields.size(); i++){
@@ -199,20 +207,27 @@ public class Player {
     
     }
     
+    
+    //DEVUELVE LA SUMA DE PROTECCIÓN DE LOS ESCUDOS MAS LA INTELIGENCIA
     float defensiveEnergy(){
      return intelligence+this.sumShields();
     }
     
     //boolean manageHit(float receivedAttack){}
     
+    // RESETEA LOS HITS
     void resetHits(){
         consecutiveHits = 0;
     }
     
+    
+    // QUITA SALUD
     void gotWounded(){
         this.health--;
     }
     
+    
+    //AÑADE GOLPES CONSECUTIVOS
     void incConsecutiveHits(){
         consecutiveHits++;
     }

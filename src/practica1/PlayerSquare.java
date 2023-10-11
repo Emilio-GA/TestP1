@@ -9,10 +9,13 @@ package practica1;
  * @author egalv
  */
 public class PlayerSquare {
+    
+    //FILA
     private int row;
     
+    
+    //COLUMNA
     private int col;
     
-  
      
 }

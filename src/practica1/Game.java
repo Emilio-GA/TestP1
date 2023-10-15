@@ -35,32 +35,32 @@ public class Game {
     
     
     // METODO FINISHED
-    boolean finished() {
+    //boolean finished() {
         
         
-    }
+    //}
     
     
     // METODO NEXTSTEP
-    boolean nextStep(Directions preferredDirection) {
+    //boolean nextStep(Directions preferredDirection) {
         
         
-    }
+    //}
     
     
     // METODO GETGAMESTATE
-    GameState getGameState() {
+    //GameState getGameState() {
         
         
-    }
+    //}
     
     
     // METODO CONFIGURELABYRINTH
-    void configureLabyrinth() {
+    //void configureLabyrinth() {
         
         
         
-    }
+    //}
     
     
     // METODO NEXTPLAYER
@@ -72,16 +72,16 @@ public class Game {
     
     
     // METODO ACTUALDIRECTIONS
-    Directions actualDirection(Directions preferredDirection) {
+    //Directions actualDirection(Directions preferredDirection) {
         
         
-    }
+    //}
     
     
     // METODO COMBAT
-    GameCharacter combat(Monster monster) {
+    //GameCharacter combat(Monster monster) {
         
-    }
+    //}
     
     
     // METODO MANAGEREWARD

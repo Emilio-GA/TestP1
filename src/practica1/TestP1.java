@@ -37,7 +37,9 @@ public class TestP1 {
         System.out.println(hacha.toString());
         hacha.attack();
         hacha.attack();
-        while (hacha.discard()){};
+        while (hacha.discard()){
+        System.out.println("intento");
+        };
        
         
         // Clase Shield

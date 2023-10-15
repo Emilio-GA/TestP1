@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -13,7 +14,7 @@ package Practica1;
 
 // CLASE QUE REPRESENTA EL LABERINTO DEL JUEGO
 public class Labyrinth {
-    
+/**    
     //
     private static char BLOCK_CHAR = 'X';
     
@@ -184,4 +185,5 @@ public class Labyrinth {
         
         
     }
+ **/
  }

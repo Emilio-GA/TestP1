@@ -37,9 +37,7 @@ public class TestP1 {
         System.out.println(hacha.toString());
         hacha.attack();
         hacha.attack();
-        while (hacha.discard()){
-        System.out.println("intento");
-        };
+        while (hacha.discard()){};
        
         
         // Clase Shield
@@ -120,6 +118,45 @@ public class TestP1 {
         System.out.println(gs.getMonsters());
         System.out.println(gs.getLog());
         System.out.println(gs.getCurrentPlayer());
+        
+        
+        
+        
+        // Clase monster
+        System.out.println("Clase monstruo");
+        Monster dragon = new Monster ("Smaug", 3 , 4)  ;
+        System.out.println(dragon.attack());
+        System.out.println(dragon.toString());
+        dragon.gotWounded();
+        dragon.gotWounded();
+        dragon.gotWounded();
+        dragon.gotWounded();
+        dragon.gotWounded();
+        System.out.println(dragon.dead());
+        dragon.setPos(0, 0);
+        
+        //Clase Player
+        System.out.println("Clase jugador");
+        
+        Player Emilio = new Player ('0', 5 , 5);
+        Emilio.setPos(1, 1);
+        System.out.println(Emilio.getCol());
+        System.out.println(Emilio.getRow());
+        System.out.println(Emilio.getNumber());
+        Weapon espada = Emilio.newWeapon();
+        Shield casco = Emilio.newShield();
+        System.out.println(Emilio.dead());
+        //Emilio.resurrect();
+        //System.out.println(Emilio.defensiveEnergy());
+        
+        //System.out.println((char) Emilio.attack());
+        System.out.println(Emilio.toString());
+        
+        
+       
+        
+
+        
         
     }
 }

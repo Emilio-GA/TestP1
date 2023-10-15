@@ -66,7 +66,7 @@ public class Monster {
     // METODO DEAD comprueba si esta muerto
     boolean dead() {
         
-        if (health == 0){
+        if (health <= 0){
            return true;
         }else{
            return false;
@@ -102,7 +102,7 @@ public class Monster {
     public String toString() {
         return "M[ "+ name + ",  Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
-        ", Row and Col" + Integer.toString(row) + ", " + Integer.toString(col)  + " ]";
+        ", Row and Col (" + Integer.toString(row) + ", " + Integer.toString(col)  + ") ]";
     }
           
     

@@ -125,7 +125,7 @@ public class Player {
     
     // comprovar si esta muerto
     boolean dead(){
-        if (health == 0){
+        if (health <= 0){
            return true;
         }else{
            return false;

@@ -2,13 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package practica1;
+package Practica1;
+
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
+// CLASE PLAYERSQUARE
 public class PlayerSquare {
+    
     
     //FILA
     private int row;
@@ -17,5 +21,8 @@ public class PlayerSquare {
     //COLUMNA
     private int col;
     
+    
+    // JUGADOR
+    private Player player;
      
 }

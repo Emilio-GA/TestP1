@@ -3,9 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Practica1;
-
 import java.util.ArrayList;
-
 
 
 /**
@@ -71,12 +69,7 @@ public class Player {
     
     //Lista de escudos
     private static ArrayList <Shield> shields; 
-    
-        
-    
-
-    
-    
+      
     
     //constructor
     public Player (char number, float intelligence, float strength){
@@ -84,8 +77,6 @@ public class Player {
         this.number = number;
         this.intelligence = intelligence;
         this.strength = strength;
-        
-        
     }
     
     
@@ -97,24 +88,26 @@ public class Player {
     weapons.clear();
     shields.clear();
     
-    }
-        
+    }   
     
     
     // devolver fila
     int getRow(){
         return row;
     }
+   
     
     // devolver columna
     int getCol(){
         return col;
     }
     
+    
     // devolver numero del jugador
     char getNumber(){
         return number;    
     }
+    
     
     // Establecer una posición
     void setPos(int row, int col){
@@ -122,6 +115,7 @@ public class Player {
         this.col = col;
         
     }
+    
     
     // comprovar si esta muerto
     boolean dead(){
@@ -140,17 +134,16 @@ public class Player {
     float attack(){
         return strength+this.sumWeapons();
     }
-    
-    
-    
-  //  boolean defend(float receivedAttack){
         
-   // return this.manageHit(receivedAttack);
     
-   // }
+    //boolean defend(float receivedAttack){
+        
+    //  return this.manageHit(receivedAttack);
     
+    // }
     
-    
+  
+    // recibir premio
     void receiveReward(){}
     
     
@@ -163,9 +156,11 @@ public class Player {
     }
     
     
+    // recibir arma
     void receiveWeapon(Weapon w){}
     
     
+    // recibir escudo
     void receiveShield (Shield s){}
     
     
@@ -213,7 +208,9 @@ public class Player {
      return intelligence+this.sumShields();
     }
     
+    
     //boolean manageHit(float receivedAttack){}
+    
     
     // RESETEA LOS HITS
     void resetHits(){
@@ -231,19 +228,4 @@ public class Player {
     void incConsecutiveHits(){
         consecutiveHits++;
     }
-    
-    
-    
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

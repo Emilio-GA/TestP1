@@ -10,18 +10,10 @@ package Practica1;
  * @author Emilio Guillen Alvarez
  */
 
-// CLASE MONSTERSQUARE
-public class MonsterSquare {
-    
-    
-    //FILA
-    private int row;
-    
-    
-    //COLUMNA
-    private int col;
-    
+// CLASE LABYRINTHSQUARE
+public class LabyrinthSquare {
+   
     
     // MONSTER
-    private Monster monster;
+    private Labyrinth labyrinth;
 }

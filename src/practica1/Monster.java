@@ -3,9 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Practica1;
-
 import java.util.ArrayList;
-
 
 
 /**
@@ -49,11 +47,6 @@ public class Monster {
     private static ArrayList <Monster> monsters; 
     
 
-    
-     
-    
-    
-    
     // CONSTRUCTOR
     public Monster (String name, float intelligence, float strength){
         
@@ -82,11 +75,11 @@ public class Monster {
     }
     
     
-    // METODO DEFEND
+   // METODO DEFEND
    // boolean defend(float receivedAttack) {
         
         
- //   }
+   // }
     
     
     // METODO SETPOS 
@@ -95,7 +88,6 @@ public class Monster {
         this.row = row;
         this.col = col;
     }
-   
     
     
     // METODO TOSTRING
@@ -105,7 +97,6 @@ public class Monster {
         ", Row and Col (" + Integer.toString(row) + ", " + Integer.toString(col)  + ") ]";
     }
           
-    
     
     // METODO GOTWOUNDED
     void gotWounded() {

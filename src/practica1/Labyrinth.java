@@ -59,24 +59,29 @@ public class Labyrinth {
     
     
     // TABLA DE MONSTRUOS
-    private Monster[][] MonsterSquare = new Monster[nRows][nCols];
+    private Monster[][] MonsterSquare; 
     
     
     // TABLA DE PLAYER
-    private Player[][] PlayerSquare = new Player[nRows][nCols];
+    private Player[][] PlayerSquare;
     
     
     // TABLA DE LABERINTO
-    private static char[][] LabyrinthSquare;
+    private char[][] LabyrinthSquare;
 
     
     // CONSTRUCTOR
-    Labyrinth(int nRows, int nCols, int exitRow, int exitCol) {
+    public Labyrinth(int nRows, int nCols, int exitRow, int exitCol) {
         
         this.nRows = nRows;
         this.nCols = nCols;
         this.exitRow = exitRow;
         this.exitCol = exitCol;
+        
+        MonsterSquare = new Monster[nRows][nCols];
+        PlayerSquare = new Player[nRows][nCols];
+        LabyrinthSquare = new char[nRows][nCols];
+        
                 
         for (int i = 0; i < nRows; i++) {
 
@@ -84,130 +89,193 @@ public class Labyrinth {
 
                 MonsterSquare[i][j] = null;
                 PlayerSquare[i][j] = null;
-                LabyrinthSquare[i][j] = EMPTY_CHAR;
+                
+                if (i == exitRow && j == exitCol) {
+                    
+                    LabyrinthSquare[i][j] = EXIT_CHAR;
+                    
+                } else {
+                    
+                    LabyrinthSquare[i][j] = EMPTY_CHAR;
+                }
+                
             }
         }   
     }
     
     
     // METODO SPREADPLAYERS
-    void spreadPlayers(Player[] players) {
+    // public void spreadPlayers(Player[] players) {
         
         
-    }
+    // }
     
     
     // METODO HAVEAWINNER
-    boolean haveAWinner() {
+    public boolean haveAWinner() {
         
-
+        return (PlayerSquare[exitRow][exitCol] != null);
     }  
 
     
     // METODO STRING
     public String toString() {
 
+        String s = " ";
         
+        for (int i = 0; i < nRows; i++) {
+
+            for (int j = 0; j  < nCols; j++) {
+
+                s += LabyrinthSquare[i][j] + " ";
+            }
+            
+            s += "\n";
+        } 
+        
+        return s;
     }
     
     
     // METODO ADMONSTER
-    void addMonster(int row, int col, Monster monster) {
+    public void addMonster(int row, int col, Monster monster) {
         
-        
+        for (int i = 0; i < nRows; i++) {
+
+            for (int j = 0; j  < nCols; j++) {
+                
+                if (i == row && j == col && LabyrinthSquare[i][j] == EMPTY_CHAR) {
+                    
+                    LabyrinthSquare[i][j] = MONSTER_CHAR;
+                    MonsterSquare[i][j] = monster;
+                    MonsterSquare[i][j].setPos(row, col);
+                } 
+            }
+        }  
     }
     
     
     // METODO PUTPLAYER
-    Monster putPlayer(Directions direction, Player player) {
+    // public Monster putPlayer(Directions direction, Player player) {
         
         
-    }
+    // }
         
 
     // METODO ADDBLOCK
-    void addBlock(Orientation orientation, int startRow, int startCol, int length) {
+    // public void addBlock(Orientation orientation, int startRow, int startCol, int length) {
         
         
-    }
+    // }
     
     
     // METODO VALIDMOVES
-    Directions[] validMoves(int row, int col) {
+    // public Directions[] validMoves(int row, int col) {
         
         
-    }
+    // }
     
     
     // METODO POSOK
-    boolean posOK(int row, int col) {
+    private boolean posOK(int row, int col) {
         
+        boolean posok = false;
+        int i, j;
         
+        for (i = 0; i < this.nRows; i++) {
+            
+            for (j = 0; j < this.nCols; j++) {
+                
+                if (i == row && j == col) {posok = true;}
+            }
+        }
+        
+        return posok;
     }
     
     
     // METODO EMPTYPOS
-    boolean emptyPos(int row, int col) {
+    private boolean emptyPos(int row, int col) {
         
-        
-        
+        return LabyrinthSquare[row][col] == EMPTY_CHAR;
     }
     
     
     // METODO MOSTERPOS
-    boolean monsterPos(int row, int col) {
+    private boolean monsterPos(int row, int col) {
         
-        
-        
+        return LabyrinthSquare[row][col] == MONSTER_CHAR;
+
     }
     
     
     // METODO EXITPOS
-    boolean exitPos(int row, int col) {
+    private boolean exitPos(int row, int col) {
         
-        
+        return LabyrinthSquare[row][col] == EXIT_CHAR;
     }
     
     
     // METODO COMBATPOS
-    boolean combatPos(int row, int col) {
+    private boolean combatPos(int row, int col) {
         
-        
+        return LabyrinthSquare[row][col] == COMBAT_CHAR;
     }
     
     
     // METODO CANSTEPON
-    boolean canStepOn(int row, int col) {
+    private boolean canStepOn(int row, int col) {
         
-        
+        return posOK(row, col) || emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
     }
     
     
     // METODO UPDATEOLDPOS
-    void updateOldPos(int row, int col) {
+    private void updateOldPos(int row, int col) {
         
-        
+        if (posOK(row, col)) {
+            
+            if (combatPos(row, col)) {
+                
+                LabyrinthSquare[row][col] = MONSTER_CHAR;
+            
+            } else {
+                
+                LabyrinthSquare[row][col] = EMPTY_CHAR;
+            }
+        }
     }
     
     
     // METODO DIR2POS
-    int[] dir2Pos(int row, int col, Directions direction) {
+    private int[] dir2Pos(int row, int col, Directions direction) {
+        
+        int[]sol = {0, 0};
         
         
+        
+        
+        return sol;
     }
     
     
     // METODO RANDOMEMPTYPOS
-    int[] randomEmptyPos() {
+    private int[] randomEmptyPos() {
         
+        int[]sol = {0, 0};
+        
+        
+        
+        
+        return sol;
         
     }
     
     
     // METODO MONSTER
-    Monster putPlayer2D(int oldRow, int oldCol, int row, int col, Player player) {
+    // private Monster putPlayer2D(int oldRow, int oldCol, int row, int col, Player player) {
         
         
-    }
+    // }
  
  }

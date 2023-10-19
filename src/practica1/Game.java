@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Practica1;
+import java.util.ArrayList;
 
 
 /**
@@ -22,8 +23,19 @@ public class Game {
     private int currentPlayerIndex;
     
     
+    // VARIABLE ARRRAYLIST PLAYERS
+    ArrayList<Player> players;
+    
+    
+    // VARIABLE ARRAYLIST MONSTERS
+    ArrayList<Monster> monsters;
+    
     // VARIABLE LOG
     private String log;
+    
+    
+    
+    
     
     
     // CONSTRUCTOR

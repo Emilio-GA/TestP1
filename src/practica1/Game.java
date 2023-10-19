@@ -34,10 +34,6 @@ public class Game {
     private String log;
     
     
-    
-    
-    
-    
     // CONSTRUCTOR
     public Game(int nplayers) {
         

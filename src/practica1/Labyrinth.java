@@ -81,26 +81,18 @@ public class Labyrinth {
         MonsterSquare = new Monster[nRows][nCols];
         PlayerSquare = new Player[nRows][nCols];
         LabyrinthSquare = new char[nRows][nCols];
-        
-                
+          
         for (int i = 0; i < nRows; i++) {
 
             for (int j = 0; j  < nCols; j++) {
 
                 MonsterSquare[i][j] = null;
                 PlayerSquare[i][j] = null;
-                
-                if (i == exitRow && j == exitCol) {
-                    
-                    LabyrinthSquare[i][j] = EXIT_CHAR;
-                    
-                } else {
-                    
-                    LabyrinthSquare[i][j] = EMPTY_CHAR;
-                }
-                
+                LabyrinthSquare[i][j] = EMPTY_CHAR;  
             }
-        }   
+        }
+        
+        LabyrinthSquare[exitRow][exitCol] = EXIT_CHAR;
     }
     
     
@@ -114,7 +106,7 @@ public class Labyrinth {
     // METODO HAVEAWINNER
     public boolean haveAWinner() {
         
-        return (PlayerSquare[exitRow][exitCol] != null);
+        return PlayerSquare[exitRow][exitCol] != null;
     }  
 
     
@@ -140,18 +132,12 @@ public class Labyrinth {
     // METODO ADMONSTER
     public void addMonster(int row, int col, Monster monster) {
         
-        for (int i = 0; i < nRows; i++) {
-
-            for (int j = 0; j  < nCols; j++) {
-                
-                if (i == row && j == col && LabyrinthSquare[i][j] == EMPTY_CHAR) {
+        if (row < nRows && col < nCols && LabyrinthSquare[row][col] == EMPTY_CHAR) {
                     
-                    LabyrinthSquare[i][j] = MONSTER_CHAR;
-                    MonsterSquare[i][j] = monster;
-                    MonsterSquare[i][j].setPos(row, col);
-                } 
-            }
-        }  
+            LabyrinthSquare[row][col] = MONSTER_CHAR;
+            MonsterSquare[row][col] = monster;
+            MonsterSquare[row][col].setPos(row, col);    
+        }
     }
     
     
@@ -180,14 +166,10 @@ public class Labyrinth {
     private boolean posOK(int row, int col) {
         
         boolean posok = false;
-        int i, j;
         
-        for (i = 0; i < this.nRows; i++) {
+        if (row < nRows && col < nCols) {
             
-            for (j = 0; j < this.nCols; j++) {
-                
-                if (i == row && j == col) {posok = true;}
-            }
+            posok = true;
         }
         
         return posok;

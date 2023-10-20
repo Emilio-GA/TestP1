@@ -19,138 +19,149 @@ public class Game {
     private static int MAX_ROUNDS = 10;
     
     
-    // VARIABLE CURRENTPLAYERSINDEX
+    // VARIABLE CURRENTPLAYERINDEX
     private int currentPlayerIndex;
     
     
+    // VARIABLE CURRENTPLAYER
+    private Player currentPlayer;
+    
+    
     // VARIABLE ARRRAYLIST PLAYERS
-    ArrayList<Player> players;
+    private ArrayList<Player> players;
     
     
     // VARIABLE ARRAYLIST MONSTERS
-    ArrayList<Monster> monsters;
+    private ArrayList<Monster> monsters;
+    
+    
+    // VARIABLE ARRAYLIST LABYRINTH
+    private Labyrinth labyrinth;
+    
     
     // VARIABLE LOG
-    private String log;
+    private String log = " ";
     
     
     // CONSTRUCTOR
     public Game(int nplayers) {
+        
+       .....
         
         
     }
     
     
     // METODO FINISHED
-    //boolean finished() {
+    public boolean finished() {
         
-        
-    //}
+        return labyrinth.haveAWinner();
+    }
     
     
     // METODO NEXTSTEP
-    //boolean nextStep(Directions preferredDirection) {
+    //public boolean nextStep(Directions preferredDirection) {
         
         
     //}
     
     
     // METODO GETGAMESTATE
-    //GameState getGameState() {
+    public GameState getGameState() {
         
-        
-    //}
+        GameState GS = new GameState(labyrinth.toString(), players.toString(), monsters.toString(), currentPlayerIndex, this.finished(), log);
+        return GS;
+    }
     
     
     // METODO CONFIGURELABYRINTH
-    //void configureLabyrinth() {
+    private void configureLabyrinth() {
         
-        
-        
-    //}
+       .....
+    }
     
     
     // METODO NEXTPLAYER
-    void nextPlayer() {
+    private void nextPlayer() {
         
-        
-        
+        this.currentPlayerIndex = (currentPlayerIndex + 1 % players.size());
+        this.currentPlayer = players.get(currentPlayerIndex);
     }
     
     
     // METODO ACTUALDIRECTIONS
-    //Directions actualDirection(Directions preferredDirection) {
+    //private Directions actualDirection(Directions preferredDirection) {
         
         
     //}
     
     
     // METODO COMBAT
-    //GameCharacter combat(Monster monster) {
+    //private GameCharacter combat(Monster monster) {
         
     //}
     
     
     // METODO MANAGEREWARD
-    void manageReward(GameCharacter winner) {
+    //private void manageReward(GameCharacter winner) {
         
         
-    }
+    //}
     
     
     // METODO MANAGERESURRECTION
-    void manageResurrection() {
+    //private void manageResurrection() {
         
         
         
-    }
+    //}
     
     
     // METODO LOGPLAYERWON
-    void logPlayerWon() {
+    private void logPlayerWon() {
         
-        
+        log += "Jugador ha ganado el combate.\n";
     }
     
     
     // METODO LOGMONSTERWON
-    void logMonsterWon() {
+    private void logMonsterWon() {
         
-        
+        log += "Jugador ha ganado el combate.\n";
     }
     
     
     // METODO LOGRESURRECTED
-    void logResurrected() {
+    private void logResurrected() {
         
-        
+        log += "Monstruo ha ganado el combate.\n";
     }
     
     
     // METODO LOGPLAYERSKIPTURN
-    void logPlayerSkipTurn() {
+    private void logPlayerSkipTurn() {
         
-        
+        log += "Jugador ha perdido el turno por estar muerto.\n";
     }
     
     
     // METODO LOGPLAYERNOORDERS
-    void logPlayerNoOrders() {
+    private void logPlayerNoOrders() {
         
-        
+        log += "Jugador no ha seguido las instrucciones del jugador humano (nofue posible).\n";
     }
     
     
     // METODO LOGNOMOSTER
-    void logNoMonster() {
+    private void logNoMonster() {
         
-        
+        log += "Jugador se ha movido a una celda vacia o no ha sido posible moverse.\n";
     }
     
     
     // METODO LOGROUNDS
-    void logRounds(int rounds, int max) {
+    private void logRounds(int rounds, int max) {
         
-        
+        log += "Se han producido" + Integer.toString(rounds) + "de " + Integer.toString(max)  + "rondas de combate.\n"; 
     }
 }

@@ -43,6 +43,11 @@ public class Game {
     private String log = " ";
     
     
+    // VARIABLES AUXILIARES
+    private int nRows = 5;
+    private int nCols = 5;
+    
+    
     // CONSTRUCTOR
     public Game(int nplayers) {
         
@@ -67,9 +72,58 @@ public class Game {
     
     
     // METODO GETGAMESTATE
+    
+    // Añadir metodos auxiliares
+    private String stringLabyrinth() {
+        
+        String lr = "";
+        
+        for (int i = 0; i < nRows; i++) {
+            
+            for (int j = 0; j < nCols; j++) {
+                
+                lr += labyrinth.toString();
+            }
+        }
+        
+        return lr;
+    }
+    
+    
+    private String stringPlayer() {
+        
+        String pl = "";
+        
+        for (int i = 0; i < nRows; i++) {
+            
+            for (int j = 0; j < nCols; j++) {
+                
+                pl += players.toString();
+            }
+        }
+        
+        return pl;
+    }
+    
+    
+    private String stringMonster() {
+        
+        String mo = "";
+        
+        for (int i = 0; i < nRows; i++) {
+            
+            for (int j = 0; j < nCols; j++) {
+                
+                mo += monsters.toString();
+            }
+        }
+        
+        return mo;
+    }
+    
     public GameState getGameState() {
         
-        GameState GS = new GameState(labyrinth.toString(), players.toString(), monsters.toString(), currentPlayerIndex, this.finished(), log);
+        GameState GS = new GameState(stringLabyrinth(), stringPlayer(), stringMonster(), currentPlayerIndex, this.finished(), log);
         return GS;
     }
     

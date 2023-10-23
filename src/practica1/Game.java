@@ -35,7 +35,7 @@ public class Game {
     private ArrayList<Monster> monsters;
     
     
-    // VARIABLE ARRAYLIST LABYRINTH
+    // VARIABLE LABYRINTH
     private Labyrinth labyrinth;
     
     
@@ -43,16 +43,25 @@ public class Game {
     private String log = " ";
     
     
-    // VARIABLES AUXILIARES
-    private int nRows = 5;
-    private int nCols = 5;
-    
-    
     // CONSTRUCTOR
     public Game(int nplayers) {
         
-       .....
+        // Indice jugador actual
+        currentPlayerIndex = Dice.whoStarts(nplayers);
         
+        // Jugadores
+        players = new ArrayList<> ();
+        for (int i = 0; i < nplayers; i++) {
+            
+            currentPlayer = new Player((char) i, Dice.randomIntelligence(), Dice.randomStrength());
+            players.add(currentPlayer);
+        }
+        
+        // Monstruos
+        monsters = new ArrayList<> ();
+        
+        // Laberinto
+        // labyrinth = new Labyrinth(...........);
         
     }
     
@@ -72,34 +81,15 @@ public class Game {
     
     
     // METODO GETGAMESTATE
-    
-    // Añadir metodos auxiliares
-    private String stringLabyrinth() {
-        
-        String lr = "";
-        
-        for (int i = 0; i < nRows; i++) {
-            
-            for (int j = 0; j < nCols; j++) {
-                
-                lr += labyrinth.toString();
-            }
-        }
-        
-        return lr;
-    }
-    
-    
+ 
+    // METODOS AUXILIARES PARA ELLO
     private String stringPlayer() {
         
         String pl = "";
         
-        for (int i = 0; i < nRows; i++) {
-            
-            for (int j = 0; j < nCols; j++) {
+        for (int i = 0; i < players.size(); i++) {
                 
-                pl += players.toString();
-            }
+            pl += players.get(i).toString() + "\n";
         }
         
         return pl;
@@ -110,12 +100,9 @@ public class Game {
         
         String mo = "";
         
-        for (int i = 0; i < nRows; i++) {
-            
-            for (int j = 0; j < nCols; j++) {
-                
-                mo += monsters.toString();
-            }
+        for (int i = 0; i < monsters.size(); i++) {
+  
+            mo += monsters.get(i).toString() + "\n";
         }
         
         return mo;
@@ -123,7 +110,7 @@ public class Game {
     
     public GameState getGameState() {
         
-        GameState GS = new GameState(stringLabyrinth(), stringPlayer(), stringMonster(), currentPlayerIndex, this.finished(), log);
+        GameState GS = new GameState(labyrinth.toString(), stringPlayer(), stringMonster(), currentPlayerIndex, this.finished(), log);
         return GS;
     }
     
@@ -131,7 +118,31 @@ public class Game {
     // METODO CONFIGURELABYRINTH
     private void configureLabyrinth() {
         
-       .....
+       // Monstruos
+       Monster m1 = new Monster("m1", Dice.randomIntelligence(), Dice.randomStrength());
+       Monster m2 = new Monster("m2", Dice.randomIntelligence(), Dice.randomStrength());
+       Monster m3 = new Monster("m3", Dice.randomIntelligence(), Dice.randomStrength());
+       Monster m4 = new Monster("m4", Dice.randomIntelligence(), Dice.randomStrength());
+    
+       // Guardar monstruos en laberinto
+       labyrinth.addMonster(0, 1, m1);
+       labyrinth.addMonster(1, 2, m1);
+       labyrinth.addMonster(2, 3, m1);
+       labyrinth.addMonster(3, 4, m1);
+       
+       // Guardar monstruos en contenedor correspondiente      
+       monsters.add(m1);
+       monsters.add(m2);
+       monsters.add(m3);
+       monsters.add(m4);
+       
+       // Bloques de obstaculos
+       /*
+       labyrinth.addBlock(Orientation.HORIZONTAL, 0, 2, 1);
+       labyrinth.addBlock(Orientation.HORIZONTAL, 1, 0, 1);
+       labyrinth.addBlock(Orientation.VERTICAL, 2, 1, 1);
+       labyrinth.addBlock(Orientation.VERTICAL, 3, 0, 1);
+       */
     }
     
     
@@ -181,14 +192,14 @@ public class Game {
     // METODO LOGMONSTERWON
     private void logMonsterWon() {
         
-        log += "Jugador ha ganado el combate.\n";
+        log += "Monstruo ha ganado el combate.\n";
     }
     
     
     // METODO LOGRESURRECTED
     private void logResurrected() {
         
-        log += "Monstruo ha ganado el combate.\n";
+        log += "Jugador ha resucitado.\n";
     }
     
     

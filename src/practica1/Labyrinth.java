@@ -101,7 +101,7 @@ public class Labyrinth {
         
         
     // }
-    
+   
     
     // METODO HAVEAWINNER
     public boolean haveAWinner() {
@@ -232,10 +232,27 @@ public class Labyrinth {
     // METODO DIR2POS
     private int[] dir2Pos(int row, int col, Directions direction) {
         
-        int[]sol = {0, 0};
+        int[] sol = {row, col};
         
+        if (direction == direction.DOWN) {
+            
+            sol[0]++;
+        }
         
+        if (direction == direction.UP) {
+            
+            sol[0]--;
+        }
         
+        if (direction == direction.LEFT) {
+            
+            sol[1]--;
+        }
+        
+        if (direction == direction.RIGHT) {
+            
+            sol[1]++;
+        }
         
         return sol;
     }
@@ -245,12 +262,19 @@ public class Labyrinth {
     private int[] randomEmptyPos() {
         
         int[]sol = {0, 0};
+
+        Dice d = new Dice();
+
+        int fila = Dice.randomPos(this.nRows);
+        int columna = Dice.randomPos(this.nCols);
         
-        
-        
+        while(!this.emptyPos(fila, columna)) {
+            
+            fila = Dice.randomPos(this.nRows);
+            columna = Dice.randomPos(this.nCols);
+        } 
         
         return sol;
-        
     }
     
     

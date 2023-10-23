@@ -61,7 +61,7 @@ public class Game {
         monsters = new ArrayList<> ();
         
         // Laberinto
-        // labyrinth = new Labyrinth(...........);
+        // labyrinth = new Labyrinth(.........);
         
     }
     
@@ -180,7 +180,7 @@ public class Game {
         
         
     //}
-    
+    //REVISAAAAA LOS STRINGSSSSS
     
     // METODO LOGPLAYERWON
     private void logPlayerWon() {

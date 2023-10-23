@@ -16,7 +16,7 @@ public class GameState {
     
     
     // VARIABLE QUE REPRESENTA LABERINTO
-    private String labyrinthv;
+    private String labyrinth;
     
     
     // VARIABLE QUE REPRESENTA JUGADORES
@@ -42,7 +42,7 @@ public class GameState {
     // CONSTRUCTOR 
     public GameState (String inilab,  String inipla, String inimon, int inicur, Boolean iniwi, String inilo){
         
-        labyrinthv = inilab;
+        labyrinth = inilab;
         players = inipla;
         monsters = inimon;
         currentPlayer = inicur;
@@ -54,7 +54,7 @@ public class GameState {
     // METODO CONSULTOR DE LA VARIABLE LABERINTO
     public String getLabyrinthv() {
     
-        return labyrinthv;
+        return labyrinth;
     
     }
     

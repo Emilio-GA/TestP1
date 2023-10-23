@@ -169,7 +169,7 @@ public class Game {
         
         
     //}
-    
+    //REVISAAAAA LOS STRINGSSSSS
     
     // METODO LOGPLAYERWON
     private void logPlayerWon() {

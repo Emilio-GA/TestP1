@@ -236,22 +236,22 @@ public class Labyrinth {
         
         if (direction == direction.DOWN) {
             
-            sol[0]++;
+            sol[row]++;
         }
         
         if (direction == direction.UP) {
             
-            sol[0]--;
+            sol[row]--;
         }
         
         if (direction == direction.LEFT) {
             
-            sol[1]--;
+            sol[col]--;
         }
         
         if (direction == direction.RIGHT) {
             
-            sol[1]++;
+            sol[col]++;
         }
         
         return sol;
@@ -261,17 +261,17 @@ public class Labyrinth {
     // METODO RANDOMEMPTYPOS
     private int[] randomEmptyPos() {
         
-        int[]sol = {0, 0};
+        int[]sol = {ROW, COL};
 
         Dice d = new Dice();
 
-        int fila = Dice.randomPos(this.nRows);
-        int columna = Dice.randomPos(this.nCols);
+        sol[ROW] = Dice.randomPos(this.nRows);
+        sol[COL] = Dice.randomPos(this.nCols);
         
-        while(!this.emptyPos(fila, columna)) {
+        while(!this.emptyPos(ROW, COL)) {
             
-            fila = Dice.randomPos(this.nRows);
-            columna = Dice.randomPos(this.nCols);
+            sol[ROW] = Dice.randomPos(this.nRows);
+            sol[COL] = Dice.randomPos(this.nCols);
         } 
         
         return sol;

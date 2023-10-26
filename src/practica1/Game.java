@@ -61,7 +61,7 @@ public class Game {
         monsters = new ArrayList<> ();
         
         // Laberinto
-        // labyrinth = new Labyrinth(.........);
+        labyrinth = new Labyrinth(5, 6, 3, 3);
         
     }
     

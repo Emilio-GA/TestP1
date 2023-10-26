@@ -50,7 +50,7 @@ public class Game {
         currentPlayerIndex = Dice.whoStarts(nplayers);
         
         // Jugadores
-        players = new ArrayList<> ();
+        players = new ArrayList<Player> ();
         for (int i = 0; i < nplayers; i++) {
             
             currentPlayer = new Player((char) i, Dice.randomIntelligence(), Dice.randomStrength());
@@ -58,7 +58,7 @@ public class Game {
         }
         
         // Monstruos
-        monsters = new ArrayList<> ();
+        monsters = new ArrayList<Monster> ();
         
         // Laberinto
         labyrinth = new Labyrinth(5, 6, 3, 3);

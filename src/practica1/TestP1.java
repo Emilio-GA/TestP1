@@ -146,10 +146,10 @@ public class TestP1 {
         Weapon espada = Emilio.newWeapon();
         Shield casco = Emilio.newShield();
         System.out.println(Emilio.dead());
-        //Emilio.resurrect();
-        //System.out.println(Emilio.defensiveEnergy());
+        Emilio.resurrect();
+        System.out.println(Emilio.defensiveEnergy());
         
-        //System.out.println((char) Emilio.attack());
+        System.out.println( Emilio.attack());
         System.out.println(Emilio.toString());
         
         

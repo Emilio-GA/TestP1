@@ -77,6 +77,17 @@ public class Player {
         this.number = number;
         this.intelligence = intelligence;
         this.strength = strength;
+        
+        shields = new ArrayList <Shield>();
+        
+        weapons = new ArrayList <Weapon>();
+        
+        Shield sh = new Shield(5, 4);
+        Weapon hacha= new Weapon (5 ,4)  ;
+        weapons.add(hacha);
+        shields.add(sh);
+    
+        
     }
     
     

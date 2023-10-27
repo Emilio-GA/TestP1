@@ -113,7 +113,7 @@ public class Labyrinth {
     // METODO STRING
     public String toString() {
 
-        String s = " ";
+        String s = "";
         
         for (int i = 0; i < nRows; i++) {
 

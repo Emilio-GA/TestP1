@@ -162,7 +162,7 @@ public class Player {
     public String toString() {
         return "Player[ "+ name +" , Number: "+ number + ",  Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
-        ", Row and Col" + Integer.toString(row) + ", " + Integer.toString(col)  + 
+        ", Row and Col " + Integer.toString(row) + ", " + Integer.toString(col)  + 
         ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) +  " ]";
     }
     

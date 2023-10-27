@@ -43,21 +43,20 @@ public class Monster {
     private int col;
     
     
-    //Lista de monstruos;
-    private static ArrayList <Monster> monsters; 
-    
-
     // CONSTRUCTOR
     public Monster (String name, float intelligence, float strength){
         
         this.name = name;
         this.intelligence = intelligence;
         this.strength = strength;
+        this.health = INITIAL_HEALTH;
+        this.row = -1;
+        this.col = -1;
     }
     
     
     // METODO DEAD comprueba si esta muerto
-    boolean dead() {
+    public boolean dead() {
         
         if (health <= 0){
            return true;
@@ -69,7 +68,7 @@ public class Monster {
     
     
     // METODO ATTACK utiliza el dado 
-    float attack() {
+    public float attack() {
         
         return Dice.intensity(strength);
     }
@@ -83,7 +82,7 @@ public class Monster {
     
     
     // METODO SETPOS 
-    void setPos(int row, int col){
+    public void setPos(int row, int col){
         
         this.row = row;
         this.col = col;
@@ -99,7 +98,7 @@ public class Monster {
           
     
     // METODO GOTWOUNDED
-    void gotWounded() {
+    private void gotWounded() {
         health--;
         
     }

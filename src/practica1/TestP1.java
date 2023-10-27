@@ -143,11 +143,6 @@ public class TestP1 {
         Monster dragon = new Monster ("Smaug", 3 , 4)  ;
         System.out.println(dragon.attack());
         System.out.println(dragon.toString());
-        dragon.gotWounded();
-        dragon.gotWounded();
-        dragon.gotWounded();
-        dragon.gotWounded();
-        dragon.gotWounded();
         System.out.println(dragon.dead());
         dragon.setPos(0, 0);
         
@@ -160,11 +155,8 @@ public class TestP1 {
         System.out.println(Emilio.getCol());
         System.out.println(Emilio.getRow());
         System.out.println(Emilio.getNumber());
-        Weapon espada = Emilio.newWeapon();
-        Shield casco = Emilio.newShield();
         System.out.println(Emilio.dead());
         Emilio.resurrect();
-        System.out.println(Emilio.defensiveEnergy());
         System.out.println( Emilio.attack());
         System.out.println(Emilio.toString());
         
@@ -172,9 +164,11 @@ public class TestP1 {
         
         // Clase labyrinth
         System.out.println("Clase Laberinto");
-        Labyrinth laberinto = new Labyrinth(10, 10, 2, 3);
+        Labyrinth laberinto = new Labyrinth(10, 10, 3, 4);
+        Monster emi = new Monster("Emilio", 2, 3);
+        laberinto.addMonster(2, 4, emi);
         System.out.println(laberinto.toString());
-        laberinto.addMonster(2, 4, dragon);
+        
         
         System.out.println("\n");
         

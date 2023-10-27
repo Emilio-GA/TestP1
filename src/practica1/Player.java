@@ -86,13 +86,17 @@ public class Player {
         Weapon hacha= new Weapon (5 ,4)  ;
         weapons.add(hacha);
         shields.add(sh);
-    
         
+        health = INITIAL_HEALTH;
+        row = -1;
+        col = -1;
+        consecutiveHits = 0;
+    
     }
     
     
     //resucitar
-    void resurrect(){
+    public void resurrect(){
     this.resetHits();
     health = INITIAL_HEALTH;
    
@@ -103,25 +107,25 @@ public class Player {
     
     
     // devolver fila
-    int getRow(){
+    public int getRow(){
         return row;
     }
    
     
     // devolver columna
-    int getCol(){
+    public int getCol(){
         return col;
     }
     
     
     // devolver numero del jugador
-    char getNumber(){
+    public char getNumber(){
         return number;    
     }
     
     
     // Establecer una posición
-    void setPos(int row, int col){
+    public void setPos(int row, int col){
         this.row = row;
         this.col = col;
         
@@ -129,7 +133,7 @@ public class Player {
     
     
     // comprovar si esta muerto
-    boolean dead(){
+    public boolean dead(){
         if (health <= 0){
            return true;
         }else{
@@ -142,12 +146,12 @@ public class Player {
     
     
     // Devuelve fuerza del ataque
-    float attack(){
+    public float attack(){
         return strength+this.sumWeapons();
     }
         
     
-    //boolean defend(float receivedAttack){
+    //public boolean defend(float receivedAttack){
         
     //  return this.manageHit(receivedAttack);
     
@@ -155,7 +159,7 @@ public class Player {
     
   
     // recibir premio
-    void receiveReward(){}
+    // public void receiveReward(){}
     
     
     // METODO TOSTRING
@@ -168,15 +172,15 @@ public class Player {
     
     
     // recibir arma
-    void receiveWeapon(Weapon w){}
+    // private void receiveWeapon(Weapon w){}
     
     
     // recibir escudo
-    void receiveShield (Shield s){}
+    // private void receiveShield (Shield s){}
     
     
     // GENERA UN ARMA 
-    Weapon newWeapon(){
+    private Weapon newWeapon(){
         Weapon hacha = new Weapon(Dice.weaponPower(), Dice.usesLeft());
         
         return hacha;
@@ -185,7 +189,7 @@ public class Player {
     
     
     // GENERA UN ESCUDO
-    Shield newShield() {
+    private Shield newShield() {
         
         Shield escudo = new Shield(Dice.shieldPower(), Dice.usesLeft());
         
@@ -194,7 +198,7 @@ public class Player {
     
     
     // SUMA LA FUERZA DE TODAS LAS ARMAS
-    float sumWeapons(){
+    private float sumWeapons(){
         float suma=0;
         for (int i= 0 ; i < weapons.size(); i++){
             suma += weapons.get(i).attack();
@@ -204,7 +208,7 @@ public class Player {
     
     
     // SUMA LA PROTECCIÓN DE TODOS LOS ESCUDOS
-    float sumShields(){
+    private float sumShields(){
         float suma=0;
         for (int i= 0 ; i < shields.size(); i++){
             suma += shields.get(i).protect();
@@ -215,7 +219,7 @@ public class Player {
     
     
     //DEVUELVE LA SUMA DE PROTECCIÓN DE LOS ESCUDOS MAS LA INTELIGENCIA
-    float defensiveEnergy(){
+    private float defensiveEnergy(){
      return intelligence+this.sumShields();
     }
     
@@ -224,19 +228,19 @@ public class Player {
     
     
     // RESETEA LOS HITS
-    void resetHits(){
+    private void resetHits(){
         consecutiveHits = 0;
     }
     
     
     // QUITA SALUD
-    void gotWounded(){
+    private void gotWounded(){
         this.health--;
     }
     
     
     //AÑADE GOLPES CONSECUTIVOS
-    void incConsecutiveHits(){
+    private void incConsecutiveHits(){
         consecutiveHits++;
     }
 }

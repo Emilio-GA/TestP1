@@ -40,7 +40,7 @@ public class Game {
     
     
     // VARIABLE LOG
-    private String log = " ";
+    private String log;
     
     
     // CONSTRUCTOR
@@ -48,6 +48,9 @@ public class Game {
         
         // Indice jugador actual
         currentPlayerIndex = Dice.whoStarts(nplayers);
+        
+        // Log
+        log = "";
         
         // Jugadores
         players = new ArrayList<Player> ();
@@ -180,10 +183,9 @@ public class Game {
     // METODO MANAGERESURRECTION
     //private void manageResurrection() {
         
-        
-        
+          
     //}
-    //REVISAAAAA LOS STRINGSSSSS
+
     
     // METODO LOGPLAYERWON
     private void logPlayerWon() {

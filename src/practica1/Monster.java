@@ -75,7 +75,7 @@ public class Monster {
     
     
    // METODO DEFEND
-   // boolean defend(float receivedAttack) {
+   // public boolean defend(float receivedAttack) {
         
         
    // }

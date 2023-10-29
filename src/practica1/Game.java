@@ -130,17 +130,11 @@ public class Game {
        Monster m3 = new Monster("m3", Dice.randomIntelligence(), Dice.randomStrength());
        Monster m4 = new Monster("m4", Dice.randomIntelligence(), Dice.randomStrength());
     
-       // Guardar monstruos en laberinto
+       // Guardar monstruos en laberinto y automaticamente en el contenedor
        labyrinth.addMonster(0, 1, m1);
        labyrinth.addMonster(1, 2, m2);
        labyrinth.addMonster(2, 3, m3);
        labyrinth.addMonster(3, 4, m4);
-       
-       // Guardar monstruos en contenedor correspondiente      
-       monsters.add(m1);
-       monsters.add(m2);
-       monsters.add(m3);
-       monsters.add(m4);
        
        // Bloques de obstaculos
        /*

@@ -56,9 +56,12 @@ public class Game {
         players = new ArrayList<Player> ();
         for (int i = 0; i < nplayers; i++) {
             
-            currentPlayer = new Player((char) i, Dice.randomIntelligence(), Dice.randomStrength());
-            players.add(currentPlayer);
+            players.add(new Player((char) i, Dice.randomIntelligence(), Dice.randomStrength()));
         }
+        
+        //Asignar el jugador que empieza
+        currentPlayer = players.get(currentPlayerIndex);
+        
         
         // Monstruos
         monsters = new ArrayList<Monster> ();
@@ -149,6 +152,9 @@ public class Game {
        labyrinth.addBlock(Orientation.VERTICAL, 2, 1, 1);
        labyrinth.addBlock(Orientation.VERTICAL, 3, 0, 1);
        */
+       
+       //Repartir jugadores
+       // spreadPlayers(Player[] players)
     }
     
     

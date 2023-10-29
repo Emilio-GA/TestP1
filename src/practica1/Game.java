@@ -132,9 +132,9 @@ public class Game {
     
        // Guardar monstruos en laberinto
        labyrinth.addMonster(0, 1, m1);
-       labyrinth.addMonster(1, 2, m1);
-       labyrinth.addMonster(2, 3, m1);
-       labyrinth.addMonster(3, 4, m1);
+       labyrinth.addMonster(1, 2, m2);
+       labyrinth.addMonster(2, 3, m3);
+       labyrinth.addMonster(3, 4, m4);
        
        // Guardar monstruos en contenedor correspondiente      
        monsters.add(m1);

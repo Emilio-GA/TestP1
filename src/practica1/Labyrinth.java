@@ -59,15 +59,15 @@ public class Labyrinth {
     
     
     // TABLA DE MONSTRUOS
-    private Monster[][] MonsterSquare; 
+    private Monster[][] monsters; 
     
     
     // TABLA DE PLAYER
-    private Player[][] PlayerSquare;
+    private Player[][] players;
     
     
     // TABLA DE LABERINTO
-    private char[][] LabyrinthSquare;
+    private char[][] labyrinth;
 
     
     // CONSTRUCTOR
@@ -78,35 +78,40 @@ public class Labyrinth {
         this.exitRow = exitRow;
         this.exitCol = exitCol;
         
-        MonsterSquare = new Monster[nRows][nCols];
-        PlayerSquare = new Player[nRows][nCols];
-        LabyrinthSquare = new char[nRows][nCols];
+        monsters = new Monster[nRows][nCols];
+        players = new Player[nRows][nCols];
+        labyrinth = new char[nRows][nCols];
           
         for (int i = 0; i < nRows; i++) {
 
             for (int j = 0; j  < nCols; j++) {
 
-                MonsterSquare[i][j] = null;
-                PlayerSquare[i][j] = null;
-                LabyrinthSquare[i][j] = EMPTY_CHAR;  
+                monsters[i][j] = null;
+                players[i][j] = null;
+                labyrinth[i][j] = EMPTY_CHAR;  
             }
         }
         
-        LabyrinthSquare[exitRow][exitCol] = EXIT_CHAR;
+        labyrinth[exitRow][exitCol] = EXIT_CHAR;
     }
     
     
     // METODO SPREADPLAYERS
-    // public void spreadPlayers(Player[] players) {
+    public void spreadPlayers(Player[] players) {
         
-        
-    // }
+        for (int i = 0; i < players.length; i++) {
+            
+            Player p;
+            int[] pos = this.randomEmptyPos();
+            this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
+        }
+    }
    
     
     // METODO HAVEAWINNER
     public boolean haveAWinner() {
         
-        return PlayerSquare[exitRow][exitCol] != null;
+        return players[exitRow][exitCol] != null;
     }  
 
     
@@ -119,7 +124,7 @@ public class Labyrinth {
 
             for (int j = 0; j  < nCols; j++) {
 
-                s += LabyrinthSquare[i][j] + " ";
+                s += labyrinth[i][j] + " ";
             }
             
             s += "\n";
@@ -132,11 +137,11 @@ public class Labyrinth {
     // METODO ADMONSTER
     public void addMonster(int row, int col, Monster monster) {
         
-        if (row < nRows && col < nCols && LabyrinthSquare[row][col] == EMPTY_CHAR) {
+        if (row < nRows && col < nCols && labyrinth[row][col] == EMPTY_CHAR) {
                     
-            LabyrinthSquare[row][col] = MONSTER_CHAR;
-            MonsterSquare[row][col] = monster;
-            MonsterSquare[row][col].setPos(row, col);    
+            labyrinth[row][col] = MONSTER_CHAR;
+            monsters[row][col] = monster;
+            monsters[row][col].setPos(row, col);    
         }
     }
     
@@ -179,14 +184,14 @@ public class Labyrinth {
     // METODO EMPTYPOS
     private boolean emptyPos(int row, int col) {
         
-        return LabyrinthSquare[row][col] == EMPTY_CHAR;
+        return labyrinth[row][col] == EMPTY_CHAR;
     }
     
     
     // METODO MOSTERPOS
     private boolean monsterPos(int row, int col) {
         
-        return LabyrinthSquare[row][col] == MONSTER_CHAR;
+        return labyrinth[row][col] == MONSTER_CHAR;
 
     }
     
@@ -194,14 +199,14 @@ public class Labyrinth {
     // METODO EXITPOS
     private boolean exitPos(int row, int col) {
         
-        return LabyrinthSquare[row][col] == EXIT_CHAR;
+        return labyrinth[row][col] == EXIT_CHAR;
     }
     
     
     // METODO COMBATPOS
     private boolean combatPos(int row, int col) {
         
-        return LabyrinthSquare[row][col] == COMBAT_CHAR;
+        return labyrinth[row][col] == COMBAT_CHAR;
     }
     
     
@@ -219,11 +224,11 @@ public class Labyrinth {
             
             if (combatPos(row, col)) {
                 
-                LabyrinthSquare[row][col] = MONSTER_CHAR;
+                labyrinth[row][col] = MONSTER_CHAR;
             
             } else {
                 
-                LabyrinthSquare[row][col] = EMPTY_CHAR;
+                labyrinth[row][col] = EMPTY_CHAR;
             }
         }
     }
@@ -279,9 +284,44 @@ public class Labyrinth {
     
     
     // METODO MONSTER
-    // private Monster putPlayer2D(int oldRow, int oldCol, int row, int col, Player player) {
+    private Monster putPlayer2D(int oldRow, int oldCol, int row, int col, Player player) {
+    
+        Monster output = null;
+                
+        if (this.canStepOn(row, col)) {
+            
+            if (this.posOK(oldRow, oldCol)) {
+                
+                Player p = players[oldRow][oldCol];
+                
+                if (p == player) {
+                    
+                    this.updateOldPos(oldRow, oldCol);
+                    
+                } else {
+                    
+                    players[oldRow][oldCol] = null;
+                }
+            }
+            
+            boolean mP = this.monsterPos(row, col);
+            
+            if (mP) {
+                
+                labyrinth[row][col] = COMBAT_CHAR;
+                output = monsters[row][col];
+                
+            } else {
+                
+                char number = player.getNumber();
+                labyrinth[row][col] = number;
+            }
+            
+            players[row][col] = player;
+            player.setPos(row, col);
+        }
         
-        
-    // }
+        return output;
+    }
  
  }

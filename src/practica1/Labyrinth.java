@@ -103,7 +103,7 @@ public class Labyrinth {
             
             Player p;
             int[] pos = this.randomEmptyPos();
-            this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
+            //this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
         }
     }
    

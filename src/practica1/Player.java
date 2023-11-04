@@ -170,6 +170,7 @@ public class Player {
     public boolean defend(float receivedAttack){
         
         return this.manageHit(receivedAttack);
+        
     }
     
   

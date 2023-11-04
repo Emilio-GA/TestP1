@@ -154,7 +154,7 @@ public class Labyrinth {
         int oldCol = player.getCol();
         int[] newPos = dir2Pos(oldRow, oldCol, direction);
         
-        Monster monster = putPlayer2D(oldRow, oldCol, newPos[0], newPos[1], player);
+        Monster monster = putPlayer2D(oldRow, oldCol, newPos[ROW], newPos[COL], player);
     
         return monster;
     }

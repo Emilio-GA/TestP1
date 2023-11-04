@@ -223,7 +223,6 @@ public class Player {
             if (discard) {
                 
                 weapons.remove(wi);
-                
             }
         }
         
@@ -247,7 +246,6 @@ public class Player {
             if (discard) {
                 
                 shields.remove(si);
-                
             }
         }
         

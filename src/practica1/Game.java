@@ -166,102 +166,118 @@ public class Game {
     
     // METODO ACTUALDIRECTIONS TERMINAR
     private Directions actualDirection(Directions preferredDirection) {
-       int currentRow =this.currentPlayer.getRow();
-       int currentCol =this.currentPlayer.getCol();
-       ArrayList<Directions> validMoves = labyrinth.validMoves(currentRow, currentCol);
-       return currentPlayer.move(preferredDirection,validMoves);
+       
+        int currentRow =this.currentPlayer.getRow();
+        int currentCol =this.currentPlayer.getCol();
+        ArrayList<Directions> validMoves = labyrinth.validMoves(currentRow, currentCol);
+        
+        return currentPlayer.move(preferredDirection,validMoves);
     } 
     
     
     // METODO COMBAT
     private GameCharacter combat(Monster monster) {
+        
         int rounds = 0;
         GameCharacter winner = GameCharacter.PLAYER;
         
         float playerAttack = currentPlayer.attack();
         
         boolean lose = monster.defend(playerAttack);
+        
         while ((!lose)&& (rounds < MAX_ROUNDS)){
+            
             winner = GameCharacter.MONSTER;
             rounds++;
             float monsterAttack = monster.attack();
             lose = currentPlayer.defend(monsterAttack);
+            
             if (!lose){
+                
                 playerAttack= currentPlayer.attack();
                 winner = GameCharacter.PLAYER;
                 lose = monster.defend(playerAttack);
             }  
         }
+        
         logRounds(rounds, MAX_ROUNDS);
         return winner;
-        
     }
     
     
     // METODO MANAGEREWARD
     private void manageReward(GameCharacter winner) {
-        if(winner == GameCharacter.PLAYER){
-        currentPlayer.receiveReward();
-        logPlayerWon();
         
-        }else{
+        if (winner == GameCharacter.PLAYER){
+            
+            currentPlayer.receiveReward();
+            logPlayerWon();
+        
+        } else {
+            
             logMonsterWon();
         }
-
     }
     
     
     // METODO MANAGERESURRECTION
     private void manageResurrection() {
-         boolean resurrect= Dice.resurrectPlayer();
+        boolean resurrect= Dice.resurrectPlayer();
+        
         if (resurrect){
+            
             currentPlayer.resurrect();
             logResurrected();
+             
+        } else {
             
-            
-        }else{
             logPlayerSkipTurn();
-            
         }
-     
     }
     
     
     //METODO NEXTSTEP
-     private boolean nextStep(Directions preferredDirection){
-         log = "";
-         boolean dead = currentPlayer.dead();
-         if (!dead){
-             Directions direction = actualDirection(preferredDirection);
-             
-             if (direction != preferredDirection){
-                 logPlayerNoOrders();
-                 
-             }
-             
-             Monster monster = labyrinth.putPlayer(direction, currentPlayer);
-             
-             if (monster == null){
-                 logNoMonster();
-             }else{
-                 GameCharacter winner = combat (monster);
-                 manageReward(winner);
-                
-             }
+    private boolean nextStep(Directions preferredDirection){
+        
+        log = "";
+        boolean dead = currentPlayer.dead();
+        
+        if (!dead){
+            
+            Directions direction = actualDirection(preferredDirection);
 
-         }else{
-             
-             manageResurrection();
-             
-         }
+            if (direction != preferredDirection){
+                
+                logPlayerNoOrders();
+            }
+
+            Monster monster = labyrinth.putPlayer(direction, currentPlayer);
+
+            if (monster == null){
+                
+                logNoMonster();
+            
+            }else{
+                
+                GameCharacter winner = combat (monster);
+                manageReward(winner);
+            }
+
+        }else{
+
+            manageResurrection();
+
+        }
          
-         boolean endGame = finished();
-         if (!endGame){
-             nextPlayer();
-         }
+        boolean endGame = finished();
+        
+        if (!endGame){
+        
+            nextPlayer();
+        }
          
-         return endGame;
-     }
+        return endGame;
+    }
     
     // METODO LOGPLAYERWON
     private void logPlayerWon() {

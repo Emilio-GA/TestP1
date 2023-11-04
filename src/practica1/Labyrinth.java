@@ -179,7 +179,7 @@ public class Labyrinth {
         int row = startRow;
         int col = startCol;
         
-        while ((posOK(row, col)&&(emptyPos(row,col))&&(length >0))){
+        while ((posOK(row, col) && (emptyPos(row,col)) && (length >0))){
             
             labyrinth[row][ col] = BLOCK_CHAR;
             length -= 1;

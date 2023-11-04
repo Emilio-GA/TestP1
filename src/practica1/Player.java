@@ -222,7 +222,8 @@ public class Player {
             
             if (discard) {
                 
-                wi = weapons.get(i);
+                weapons.remove(wi);
+                
             }
         }
         
@@ -245,7 +246,8 @@ public class Player {
             
             if (discard) {
                 
-                si = shields.get(i);
+                shields.remove(si);
+                
             }
         }
         

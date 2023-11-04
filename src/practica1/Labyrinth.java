@@ -363,9 +363,9 @@ public class Labyrinth {
                 }
             }
             
-            boolean mP = this.monsterPos(row, col);
+            boolean monsterPos = this.monsterPos(row, col);
             
-            if (mP) {
+            if (monsterPos) {
                 
                 labyrinth[row][col] = COMBAT_CHAR;
                 output = monsters[row][col];

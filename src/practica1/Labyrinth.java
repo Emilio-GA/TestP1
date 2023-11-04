@@ -4,6 +4,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Practica1;
+import java.util.ArrayList;
 
 
 /**
@@ -99,7 +100,6 @@ public class Labyrinth {
     // METODO SPREADPLAYERS
     public void spreadPlayers(Player[] players) {
         
-        // DUDA SOBRE QUE HACER CON NEXT
         for (int i = 0; i < players.length; i++) {
             
             Player p = players[i];
@@ -183,32 +183,38 @@ public class Labyrinth {
     
     
     // METODO VALIDMOVES
-    public Directions[] validMoves(int row, int col) {
+    public ArrayList<Directions> validMoves(int row, int col) {
         
         // El metodo values devuelve un array de todos los valores enum en el orden en que se declararon en la enumeración
-        Directions[] output = Directions.values();
+        //Directions[] output = Directions.values();
+        
+        // Directions[] output = {null, null, null, null};
+        ArrayList<Directions> output = new ArrayList<Directions>();
         
         if (this.canStepOn(row + 1, col)) {
             
-            output[3] = Directions.DOWN;
+            //output[0] = Directions.DOWN;
+            output.add(Directions.DOWN);
         }
         
         if (this.canStepOn(row - 1, col)) {
             
-            output[3] = Directions.UP;
+            //output[1] = Directions.UP;
+            output.add(Directions.UP);
         }
         
         if (this.canStepOn(row, col + 1)) {
             
-            output[3] = Directions.RIGHT; 
+            //output[2] = Directions.RIGHT;
+            output.add(Directions.RIGHT);
         }
         
         if (this.canStepOn(row, col - 1)) {
             
-            output[3] = Directions.LEFT;
+            //output[3] = Directions.LEFT;
+            output.add(Directions.LEFT);
         }
         
-        // DUDA SOBRE PASO 1.6 OUTPUT
         return output;    
     }
     

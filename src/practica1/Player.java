@@ -143,7 +143,7 @@ public class Player {
     
     
     // Metodo move
-    public Directions move(Directions direction, Directions[] validMoves) {
+    public Directions move(Directions direction, ArrayList<Directions> validMoves) {
        
         int size = validMoves.length;
         
@@ -196,10 +196,7 @@ public class Player {
          int extraHealth = Dice.healthReward();
          
          health += extraHealth;
-         
-         
-     
-     
+
      }
     
     
@@ -307,7 +304,7 @@ public class Player {
     boolean manageHit(float receivedAttack){
     
         // DUDAS
-        this.manageHit(receivedAttack);
+        boolean lose;
         float defense = this.defensiveEnergy();
         
         if (defense < receivedAttack) {
@@ -323,15 +320,14 @@ public class Player {
         if ((this.consecutiveHits == HITS2LOSE) || this.dead()) {
             
             this.resetHits();
-            // lose = true
+            lose = true;
             
         } else {
             
-            // lose = false
+            lose = false;
         }
         
-        // return lose
-    
+        return lose;
     }
     
     

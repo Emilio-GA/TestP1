@@ -168,8 +168,8 @@ public class Game {
     private Directions actualDirection(Directions preferredDirection) {
        int currentRow =this.currentPlayer.getRow();
        int currentCol =this.currentPlayer.getCol();
-       Directions[] validMoves = labyrinth.validMoves(currentRow, currentCol);
-      return currentPlayer.move(preferredDirection,validMoves);
+       ArrayList<Directions> validMoves = labyrinth.validMoves(currentRow, currentCol);
+       return currentPlayer.move(preferredDirection,validMoves);
     } 
     
     

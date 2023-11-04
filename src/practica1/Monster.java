@@ -86,7 +86,7 @@ public class Monster {
             if (defensiveEnergy < receivedAttack) {
                 
                 this.gotWounded();
-                this.dead();
+                isDead = this.dead();
             }
         }
         

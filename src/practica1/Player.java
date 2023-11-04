@@ -20,7 +20,7 @@ public class Player {
     
     
     // Maximo escudos
-    private static int MAX_SHIELD = 3;
+    private static int MAX_SHIELDS = 3;
     
     
     // SALUD INICIAL
@@ -132,7 +132,7 @@ public class Player {
     }
     
     
-    // comprovar si esta muerto
+    // Comprueba si esta muerto
     public boolean dead(){
         if (health <= 0){
            return true;
@@ -142,7 +142,20 @@ public class Player {
     }
     
     
-    //Directions move(Directions direction, Directions[] validMoves){}
+    // Metodo move
+    public Directions move(Directions direction, Directions[] validMoves) {
+       
+        int size = validMoves.length;
+        
+        // DUDA A IMPLEMENTAR
+        boolean contained = validMoves[]
+                
+        if ((size > 0 ) && !contained) {
+            
+            validMoves
+        }        
+        
+    }
     
     
     // Devuelve fuerza del ataque
@@ -151,14 +164,14 @@ public class Player {
     }
         
     
-    //public boolean defend(float receivedAttack){
+    // Metodo defend
+    public boolean defend(float receivedAttack){
         
-    //  return this.manageHit(receivedAttack);
-    
-    // }
+        // DONDE APARECE DOCUMENTACION
+    }
     
   
-    // recibir premio
+    // Recibir premio
     // public void receiveReward(){}
     
     
@@ -171,12 +184,50 @@ public class Player {
     }
     
     
-    // recibir arma
-    // private void receiveWeapon(Weapon w){}
+    // Recibir arma
+    private void receiveWeapon(Weapon w){
+        
+        for (int i = 0; i < weapons.size(); i++) {
+            
+            Weapon wi = weapons.get(i);
+            boolean discard = wi.discard();
+            
+            if (discard) {
+                
+                wi = weapons.get(i);
+            }
+        }
+        
+        int size = weapons.size();
+        
+        if (size < MAX_WEAPONS) {
+            
+            weapons.add(w);
+        }
+    }
     
     
-    // recibir escudo
-    // private void receiveShield (Shield s){}
+    // Recibir escudo
+    private void receiveShield (Shield s){
+        
+        for (int i = 0; i < shields.size(); i++) {
+            
+            Shield si = shields.get(i);
+            boolean discard = si.discard();
+            
+            if (discard) {
+                
+                si = shields.get(i);
+            }
+        }
+        
+        int size = shields.size();
+        
+        if (size < MAX_SHIELDS) {
+            
+            shields.add(s);
+        }
+    }
     
     
     // GENERA UN ARMA 
@@ -224,7 +275,36 @@ public class Player {
     }
     
     
-    //boolean manageHit(float receivedAttack){}
+    // METODO manageHit
+    boolean manageHit(float receivedAttack){
+    
+        // DUDAS
+        this.manageHit(receivedAttack);
+        float defense = this.defensiveEnergy();
+        
+        if (defense < receivedAttack) {
+            
+            this.gotWounded();
+            this.incConsecutiveHits();
+            
+        } else {
+            
+            this.resetHits();
+        }
+        
+        if ((this.consecutiveHits == HITS2LOSE) || this.dead()) {
+            
+            this.resetHits();
+            // lose = true
+            
+        } else {
+            
+            // lose = false
+        }
+        
+        // return lose
+    
+    }
     
     
     // RESETEA LOS HITS

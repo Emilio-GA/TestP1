@@ -74,11 +74,25 @@ public class Monster {
     }
     
     
-   // METODO DEFEND
-   // public boolean defend(float receivedAttack) {
+    // METODO DEFEND
+    public boolean defend(float receivedAttack) {
         
+        boolean isDead = this.dead();
+       
+        if (!isDead) {
+           
+            float defensiveEnergy = Dice.intensity(intelligence);
+       
+            if (defensiveEnergy < receivedAttack) {
+                
+                this.gotWounded();
+                this.dead();
+            }
+        }
         
-   // }
+        // DUDA DE COMO HACERLO
+        return isDead;   
+    }
     
     
     // METODO SETPOS 

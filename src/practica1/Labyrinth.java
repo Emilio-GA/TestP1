@@ -99,11 +99,12 @@ public class Labyrinth {
     // METODO SPREADPLAYERS
     public void spreadPlayers(Player[] players) {
         
+        // DUDA SOBRE QUE HACER CON NEXT
         for (int i = 0; i < players.length; i++) {
             
-            Player p;
+            Player p = players[i];
             int[] pos = this.randomEmptyPos();
-            //this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
+            this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
         }
     }
    
@@ -161,10 +162,34 @@ public class Labyrinth {
     
     
     // METODO VALIDMOVES
-    // public Directions[] validMoves(int row, int col) {
+    public Directions[] validMoves(int row, int col) {
         
+        // El metodo values devuelve un array de todos los valores enum en el orden en que se declararon en la enumeración
+        Directions[] output = Directions.values();
         
-    // }
+        if (this.canStepOn(row + 1, col)) {
+            
+            output[3] = Directions.DOWN;
+        }
+        
+        if (this.canStepOn(row - 1, col)) {
+            
+            output[3] = Directions.UP;
+        }
+        
+        if (this.canStepOn(row, col + 1)) {
+            
+            output[3] = Directions.RIGHT; 
+        }
+        
+        if (this.canStepOn(row, col - 1)) {
+            
+            output[3] = Directions.LEFT;
+        }
+        
+        // DUDA SOBRE PASO 1.6 OUTPUT
+        return output;    
+    }
     
     
     // METODO POSOK

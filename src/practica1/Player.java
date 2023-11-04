@@ -173,11 +173,11 @@ public class Player {
   
     // Recibir premio
      public void receiveReward(){
-         int cont = 1;
+         
          int wReward = Dice.weaponsReward();
          int sReward = Dice.shieldsReward();
          
-         for (int i = 0; i < cont; i++){
+         for (int i = 0; i < wReward; i++){
              
             Weapon wnew = newWeapon();
             
@@ -185,7 +185,7 @@ public class Player {
             
          }
          
-         for (int i = 0; i < cont; i++){
+         for (int i = 0; i < sReward ; i++){
              
             Shield snew = newShield();
             

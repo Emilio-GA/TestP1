@@ -145,16 +145,18 @@ public class Player {
     // Metodo move
     public Directions move(Directions direction, ArrayList<Directions> validMoves) {
        
-        int size = validMoves.length;
+        int size = validMoves.size();
         
-        // DUDA A IMPLEMENTAR
-        boolean contained = validMoves[]
+        boolean contained = validMoves.contains(direction);
                 
         if ((size > 0 ) && !contained) {
             
-            validMoves
-        }        
+            return validMoves.get(0);
         
+        } else {
+            
+            return direction;
+        }        
     }
     
     
@@ -167,7 +169,7 @@ public class Player {
     // Metodo defend
     public boolean defend(float receivedAttack){
         
-        // DONDE APARECE DOCUMENTACION
+        return this.manageHit(receivedAttack);
     }
     
   

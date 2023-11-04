@@ -148,17 +148,38 @@ public class Labyrinth {
     
     
     // METODO PUTPLAYER
-    // public Monster putPlayer(Directions direction, Player player) {
+    public Monster putPlayer(Directions direction, Player player) {
+        int oldRow = player.getRow();
+        int oldCol = player.getCol();
+        int[] newPos = dir2Pos(oldRow, oldCol, direction);
+        Monster monster = putPlayer2D(oldRow, oldCol, newPos[0], newPos[1], player);
+        return monster;
         
-        
-    // }
+     }
         
 
     // METODO ADDBLOCK
-    // public void addBlock(Orientation orientation, int startRow, int startCol, int length) {
-        
-        
-    // }
+     public void addBlock(Orientation orientation, int startRow, int startCol, int length) {
+        int incRow,  incCol;
+        if (orientation == Orientation.VERTICAL){
+             incRow = 1;
+             incCol= 0;
+            
+            
+        }else{
+             incRow = 0;
+             incCol= 1;
+        }
+        int row = startRow;
+        int col = startCol;
+        while((posOK(row, col)&&(emptyPos(row,col))&&(length >0))){
+            labyrinth[row][ col] = BLOCK_CHAR;
+            length -= 1;
+            row += incRow;
+            col += incCol;
+            
+        }
+     }
     
     
     // METODO VALIDMOVES

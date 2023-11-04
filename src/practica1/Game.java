@@ -152,9 +152,7 @@ public class Game {
        labyrinth.addBlock(Orientation.VERTICAL, 2, 1, 1);
        labyrinth.addBlock(Orientation.VERTICAL, 3, 0, 1);
        */
-       
-       //Repartir jugadores
-       // spreadPlayers(Player[] players)
+
     }
     
     
@@ -170,7 +168,7 @@ public class Game {
     private Directions actualDirection(Directions preferredDirection) {
        int currentRow =this.currentPlayer.getRow();
        int currentCol =this.currentPlayer.getCol();
-       ArrayList <Directions> validMoves = labyrinth.validMoves(currentRow, currentCol);
+       Directions[] validMoves = labyrinth.validMoves(currentRow, currentCol);
       return currentPlayer.move(preferredDirection,validMoves);
     } 
     

@@ -172,7 +172,35 @@ public class Player {
     
   
     // Recibir premio
-    // public void receiveReward(){}
+     public void receiveReward(){
+         int cont = 1;
+         int wReward = Dice.weaponsReward();
+         int sReward = Dice.shieldsReward();
+         
+         for (int i = 0; i < cont; i++){
+             
+            Weapon wnew = newWeapon();
+            
+            receiveWeapon(wnew);
+            
+         }
+         
+         for (int i = 0; i < cont; i++){
+             
+            Shield snew = newShield();
+            
+            receiveShield(snew);
+            
+         }
+         
+         int extraHealth = Dice.healthReward();
+         
+         health += extraHealth;
+         
+         
+     
+     
+     }
     
     
     // METODO TOSTRING

@@ -98,13 +98,16 @@ public class Labyrinth {
     
     
     // METODO SPREADPLAYERS
-    public void spreadPlayers(Player[] players) {
+    public void spreadPlayers(ArrayList<Player> players) {
         
-        for (int i = 0; i < players.length; i++) {
+        for (int i = 0; i < players.size(); i++) {
             
-            Player p = players[i];
+            Player p = players.get(i);
+            
             int[] pos = this.randomEmptyPos();
+            
             this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
+            
         }
     }
    
@@ -231,7 +234,7 @@ public class Labyrinth {
         
         boolean posok = false;
         
-        if (row < nRows && col < nCols) {
+        if (row < nRows && col < nCols && row >= 0 && col >= 0) {
             
             posok = true;
         }
@@ -271,8 +274,13 @@ public class Labyrinth {
     
     // METODO CANSTEPON
     private boolean canStepOn(int row, int col) {
+        if (posOK(row, col)){
+        return   emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
+    
+        }else{
+            return false;
+        }
         
-        return posOK(row, col) || emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
     }
     
     
@@ -300,22 +308,22 @@ public class Labyrinth {
         
         if (direction == direction.DOWN) {
             
-            sol[row]++;
+            sol[ROW]++;
         }
         
         if (direction == direction.UP) {
             
-            sol[row]--;
+            sol[ROW]--;
         }
         
         if (direction == direction.LEFT) {
             
-            sol[col]--;
+            sol[COL]--;
         }
         
         if (direction == direction.RIGHT) {
             
-            sol[col]++;
+            sol[COL]++;
         }
         
         return sol;
@@ -332,12 +340,13 @@ public class Labyrinth {
         sol[ROW] = Dice.randomPos(this.nRows);
         sol[COL] = Dice.randomPos(this.nCols);
         
-        while(!this.emptyPos(ROW, COL)) {
+        while(!this.emptyPos(sol[ROW], sol[COL])) {
             
             sol[ROW] = Dice.randomPos(this.nRows);
             sol[COL] = Dice.randomPos(this.nCols);
         } 
-        
+        System.out.println(sol[ROW]);
+        System.out.println( sol[COL]);
         return sol;
     }
     

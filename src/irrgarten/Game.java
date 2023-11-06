@@ -56,7 +56,7 @@ public class Game {
         players = new ArrayList<Player> ();
         for (int i = 0; i < nplayers; i++) {
             
-            players.add(new Player((char) i, Dice.randomIntelligence(), Dice.randomStrength()));
+            players.add(new Player(Integer.toString(i).charAt(0), Dice.randomIntelligence(), Dice.randomStrength()));
         }
         
         //Asignar el jugador que empieza
@@ -146,12 +146,15 @@ public class Game {
        monsters.add(m4);
        
        // Bloques de obstaculos
-       /*
+       
        labyrinth.addBlock(Orientation.HORIZONTAL, 0, 2, 1);
        labyrinth.addBlock(Orientation.HORIZONTAL, 1, 0, 1);
        labyrinth.addBlock(Orientation.VERTICAL, 2, 1, 1);
        labyrinth.addBlock(Orientation.VERTICAL, 3, 0, 1);
-       */
+       
+       //
+       labyrinth.spreadPlayers(this.players);
+               
 
     }
     
@@ -159,16 +162,19 @@ public class Game {
     // METODO NEXTPLAYER
     private void nextPlayer() {
         
-        this.currentPlayerIndex = (currentPlayerIndex + 1 % players.size());
+        this.currentPlayerIndex = ((currentPlayerIndex + 1) % players.size());
         this.currentPlayer = players.get(currentPlayerIndex);
+        
     }
     
     
     // METODO ACTUALDIRECTIONS TERMINAR
     private Directions actualDirection(Directions preferredDirection) {
-       
+       System.out.println("posición actual");
         int currentRow =this.currentPlayer.getRow();
+        System.out.println(currentRow);
         int currentCol =this.currentPlayer.getCol();
+        System.out.println(currentCol);
         ArrayList<Directions> validMoves = labyrinth.validMoves(currentRow, currentCol);
         
         return currentPlayer.move(preferredDirection,validMoves);

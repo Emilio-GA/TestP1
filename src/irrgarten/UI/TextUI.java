@@ -69,9 +69,9 @@ public class TextUI {
         System.out.println("Turno del jugador ");
  
  
-        System.out.println((char)gameState.getCurrentPlayer() );
+        System.out.println(Integer.toString(gameState.getCurrentPlayer()) );
  
-        System.out.println("El ganador es ");
+        System.out.println("Hay ganador ");
  
         System.out.println( gameState.getWinner() );
  

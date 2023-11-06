@@ -82,10 +82,7 @@ public class Player {
         
         weapons = new ArrayList <Weapon>();
         
-        Shield sh = new Shield(5, 4);
-        Weapon hacha= new Weapon (5 ,4)  ;
-        weapons.add(hacha);
-        shields.add(sh);
+ 
         
         health = INITIAL_HEALTH;
         row = -1;

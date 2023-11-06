@@ -170,7 +170,8 @@ public class Game {
     
     // METODO ACTUALDIRECTIONS TERMINAR
     private Directions actualDirection(Directions preferredDirection) {
-       System.out.println("posición actual");
+       
+        System.out.println("posición actual");
         int currentRow =this.currentPlayer.getRow();
         System.out.println(currentRow);
         int currentCol =this.currentPlayer.getCol();
@@ -330,6 +331,6 @@ public class Game {
     // METODO LOGROUNDS
     private void logRounds(int rounds, int max) {
         
-        log += "Se han producido" + Integer.toString(rounds) + "de " + Integer.toString(max)  + "rondas de combate.\n"; 
+        log += "Se han producido " + Integer.toString(rounds) + " de " + Integer.toString(max)  + " rondas de combate.\n"; 
     }
 }

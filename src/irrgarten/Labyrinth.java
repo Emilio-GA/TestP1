@@ -274,13 +274,15 @@ public class Labyrinth {
     
     // METODO CANSTEPON
     private boolean canStepOn(int row, int col) {
+        
         if (posOK(row, col)){
-        return   emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
+        
+            return   emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
     
-        }else{
+        } else {
+            
             return false;
         }
-        
     }
     
     
@@ -345,6 +347,7 @@ public class Labyrinth {
             sol[ROW] = Dice.randomPos(this.nRows);
             sol[COL] = Dice.randomPos(this.nCols);
         } 
+        
         System.out.println(sol[ROW]);
         System.out.println( sol[COL]);
         return sol;

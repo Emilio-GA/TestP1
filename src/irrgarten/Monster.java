@@ -113,7 +113,7 @@ public class Monster {
     
     // METODO GOTWOUNDED
     private void gotWounded() {
-        health--;
         
+        health--;
     }
 }

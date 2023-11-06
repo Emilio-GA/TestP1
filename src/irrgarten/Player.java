@@ -73,6 +73,7 @@ public class Player {
     
     //constructor
     public Player (char number, float intelligence, float strength){
+        
         this.name = "Player " + number;
         this.number = number;
         this.intelligence = intelligence;
@@ -82,8 +83,7 @@ public class Player {
         
         weapons = new ArrayList <Weapon>();
         
- 
-        
+
         health = INITIAL_HEALTH;
         row = -1;
         col = -1;
@@ -94,35 +94,40 @@ public class Player {
     
     //resucitar
     public void resurrect(){
-    this.resetHits();
-    health = INITIAL_HEALTH;
-   
-    weapons.clear();
-    shields.clear();
+        
+        this.resetHits();
+        health = INITIAL_HEALTH;
+
+        weapons.clear();
+        shields.clear();
     
     }   
     
     
     // devolver fila
     public int getRow(){
+        
         return row;
     }
    
     
     // devolver columna
     public int getCol(){
+        
         return col;
     }
     
     
     // devolver numero del jugador
     public char getNumber(){
+        
         return number;    
     }
     
     
     // Establecer una posición
     public void setPos(int row, int col){
+        
         this.row = row;
         this.col = col;
         
@@ -131,10 +136,14 @@ public class Player {
     
     // Comprueba si esta muerto
     public boolean dead(){
+        
         if (health <= 0){
-           return true;
-        }else{
-           return false;
+           
+            return true;
+        
+        } else {
+           
+            return false;
         }
     }
     
@@ -159,6 +168,7 @@ public class Player {
     
     // Devuelve fuerza del ataque
     public float attack(){
+        
         return strength+this.sumWeapons();
     }
         
@@ -167,7 +177,6 @@ public class Player {
     public boolean defend(float receivedAttack){
         
         return this.manageHit(receivedAttack);
-        
     }
     
   
@@ -202,6 +211,7 @@ public class Player {
     
     // METODO TOSTRING
     public String toString() {
+        
         return "Player[ "+ name +" , Number: "+ number + ",  Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
         ", Row and Col " + Integer.toString(row) + ", " + Integer.toString(col)  + 
@@ -257,10 +267,10 @@ public class Player {
     
     // GENERA UN ARMA 
     private Weapon newWeapon(){
+        
         Weapon hacha = new Weapon(Dice.weaponPower(), Dice.usesLeft());
         
-        return hacha;
-        
+        return hacha; 
     }
     
     
@@ -275,10 +285,14 @@ public class Player {
     
     // SUMA LA FUERZA DE TODAS LAS ARMAS
     private float sumWeapons(){
+        
         float suma=0;
+        
         for (int i= 0 ; i < weapons.size(); i++){
+            
             suma += weapons.get(i).attack();
         }
+        
         return suma;
     }
     
@@ -286,9 +300,12 @@ public class Player {
     // SUMA LA PROTECCIÓN DE TODOS LOS ESCUDOS
     private float sumShields(){
         float suma=0;
+        
         for (int i= 0 ; i < shields.size(); i++){
+            
             suma += shields.get(i).protect();
         }
+        
         return suma;    
     
     }
@@ -296,14 +313,14 @@ public class Player {
     
     //DEVUELVE LA SUMA DE PROTECCIÓN DE LOS ESCUDOS MAS LA INTELIGENCIA
     private float defensiveEnergy(){
-     return intelligence+this.sumShields();
+        
+        return intelligence+this.sumShields();
     }
     
     
     // METODO manageHit
     boolean manageHit(float receivedAttack){
     
-        // DUDAS
         boolean lose;
         float defense = this.defensiveEnergy();
         
@@ -333,18 +350,21 @@ public class Player {
     
     // RESETEA LOS HITS
     private void resetHits(){
+        
         consecutiveHits = 0;
     }
     
     
     // QUITA SALUD
     private void gotWounded(){
+        
         this.health--;
     }
     
     
     //AÑADE GOLPES CONSECUTIVOS
     private void incConsecutiveHits(){
+        
         consecutiveHits++;
     }
 }

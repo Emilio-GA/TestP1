@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Practica1;
+package irrgarten;
 import java.util.ArrayList;
 
 
@@ -237,7 +237,7 @@ public class Game {
     
     
     //METODO NEXTSTEP
-    private boolean nextStep(Directions preferredDirection){
+    public boolean nextStep(Directions preferredDirection){
         
         log = "";
         boolean dead = currentPlayer.dead();

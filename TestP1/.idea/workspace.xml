@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a2edeb-562e-4b8d-ae9d-4843316b84c5" name="Changes" comment="PRUEBA">
+      <change afterPath="$PROJECT_DIR$/a.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestP1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestP1.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Ruby Class" />
         <option value="Ruby Module" />
+        <option value="Ruby Class" />
       </list>
     </option>
   </component>
@@ -93,6 +94,8 @@
       <workItem from="1697014419475" duration="870000" />
       <workItem from="1697039038254" duration="53000" />
       <workItem from="1699019299392" duration="1015000" />
+      <workItem from="1699385464331" duration="2043000" />
+      <workItem from="1699388998291" duration="2318000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <option name="closed" value="true" />
@@ -124,7 +127,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="PRUEBA" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TestP1@TestP1.rcov" NAME="TestP1 Coverage Results" MODIFIED="1696364365074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TestP1" />
+    <SUITE FILE_PATH="coverage/TestP1@TestP1.rcov" NAME="TestP1 Coverage Results" MODIFIED="1699392224087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TestP1" />
     <SUITE FILE_PATH="coverage/TestP1@directions.rcov" NAME="directions Coverage Results" MODIFIED="1696361527911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="TestP1" />
   </component>
 </project>

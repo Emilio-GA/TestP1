@@ -333,4 +333,5 @@ public class Game {
         
         log += "Se han producido " + Integer.toString(rounds) + " de " + Integer.toString(max)  + " rondas de combate.\n"; 
     }
+
 }

@@ -4,6 +4,7 @@
 
 module TestP1_Ruby
   require_relative 'Dice'
+  require_relative 'A'
 
   puts "numeros ramdon del 0 al 100"
   for i in 1..100
@@ -61,8 +62,10 @@ module TestP1_Ruby
 
   puts "DESCARTES"
   for i in 1..100
-    puts( Dice.discard_element(4))
+    #  puts( Dice.discard_element(4))
   end
+  puts A.new.ver_a2 # no imprime
+  #  puts A.ver_a2 # si imprime
 
 
 

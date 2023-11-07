@@ -79,9 +79,9 @@ public class Player {
         this.intelligence = intelligence;
         this.strength = strength;
         
-        shields = new ArrayList <Shield>();
+        shields = new ArrayList <>();
         
-        weapons = new ArrayList <Weapon>();
+        weapons = new ArrayList <>();
         
 
         health = INITIAL_HEALTH;

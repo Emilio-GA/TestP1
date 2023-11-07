@@ -16,15 +16,15 @@ public class Main {
        
        
     
-    Game juego = new Game(1);
+        Game juego = new Game(1);
     
     
     
-    TextUI text = new TextUI ();
+            TextUI text = new TextUI ();
     
-    Controller contolo = new Controller(juego, text);
+                    Controller contolo = new Controller(juego, text);
     
-    contolo.play();
+                        contolo.play();
             
     
       }

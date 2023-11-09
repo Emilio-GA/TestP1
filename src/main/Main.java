@@ -12,20 +12,16 @@ import irrgarten.controller.Controller;
  * @author egalv
  */
 public class Main {
-   public static void main(String[] args) {
+   
+    public static void main(String[] args) {
        
-       
-    
         Game juego = new Game(1);
     
+        TextUI text = new TextUI ();
     
+        Controller controlo = new Controller(juego, text);
     
-            TextUI text = new TextUI ();
-    
-                    Controller contolo = new Controller(juego, text);
-    
-                        contolo.play();
-            
-    
-      }
+        controlo.play();
+           
+    }
 }

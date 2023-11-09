@@ -199,7 +199,7 @@ public class Labyrinth {
         //Directions[] output = Directions.values();
         
         // Directions[] output = {null, null, null, null};
-        ArrayList<Directions> output = new ArrayList<Directions>();
+        ArrayList<Directions> output = new ArrayList<>();
         
         if (this.canStepOn(row + 1, col)) {
             

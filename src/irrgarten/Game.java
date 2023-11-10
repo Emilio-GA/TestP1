@@ -80,14 +80,7 @@ public class Game {
         
         return labyrinth.haveAWinner();
     }
-    
-    
-    // METODO NEXTSTEP
-    //public boolean nextStep(Directions preferredDirection) {
-        
-        
-    //}
-    
+          
     
     // METODO GETGAMESTATE
  
@@ -152,7 +145,7 @@ public class Game {
        labyrinth.addBlock(Orientation.VERTICAL, 2, 1, 1);
        labyrinth.addBlock(Orientation.VERTICAL, 3, 0, 1);
        
-       //
+       // Spread Players
        labyrinth.spreadPlayers(this.players);
                
 
@@ -266,7 +259,7 @@ public class Game {
             
             }else{
                 
-                GameCharacter winner = combat (monster);
+                GameCharacter winner = combat(monster);
                 manageReward(winner);
             }
 

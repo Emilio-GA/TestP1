@@ -50,7 +50,7 @@ public class Shield {
      // MÉTODO QUE DA LA PROTECCION Y LOS USOS QUE TENDRÁ UN ESCUDO EN FORMATO TEXTO
     public String toString(){        
         
-        return "S[" + String.valueOf(protection) + "," + String.valueOf(uses)+ "]";
+        return "S[ protection " + String.valueOf(protection) + ", uses " + String.valueOf(uses)+ "]";
     }
     
     

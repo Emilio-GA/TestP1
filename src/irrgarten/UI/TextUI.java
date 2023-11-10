@@ -2,7 +2,8 @@
 package irrgarten.UI;
 
 import irrgarten.Directions;
-import irrgarten.GameState;
+//import irrgarten.GameState;
+import irrgarten.*;
 import java.util.Scanner;
 
 

@@ -215,7 +215,35 @@ public class Player {
         return "Player[ "+ name +" , Number: "+ number + ",  Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
         ", Row and Col " + Integer.toString(row) + ", " + Integer.toString(col)  + 
-        ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) +  " ]";
+        ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) + ", Shields: " +stringShields() + 
+        ", Weapons: " +stringWeapons() +  " ]";
+    }
+    
+    
+    private String stringShields(){
+               
+        String s = "";
+        
+        for (int i = 0; i < shields.size(); i++) {
+  
+            s += shields.get(i).toString() + "   ";
+        }
+        
+        return s;
+        
+    }
+    
+        private String stringWeapons(){
+               
+        String w = "";
+        
+        for (int i = 0; i < weapons.size(); i++) {
+  
+            w += weapons.get(i).toString() + "  ";
+        }
+        
+        return w;
+        
     }
     
     

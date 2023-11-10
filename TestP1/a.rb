@@ -6,9 +6,13 @@ class A
   def initialize
     @a3=40
   end
+  def ver_a2aa
+    @a2
+  end
 
-  def ver_a2
-    puts "valor del atributo a2 #{@a2}"
+  def self.ver_a2
+
+    puts "valor del atributo a2 #{ver_a2aa}"
   end
 
   end

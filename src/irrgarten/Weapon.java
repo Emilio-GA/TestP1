@@ -55,7 +55,7 @@ public class Weapon {
     // MÉTODO QUE DA EL PODER Y LOS USOS QUE TENDRÁ UN ARMA EN FORMATO TEXTO
     public String toString() {
         
-        return "W[" + String.valueOf(power) + ", " + Integer.toString(uses) + "]";
+        return "W[ power " + String.valueOf(power) + ", uses " + Integer.toString(uses) + "]";
     }
     
     

@@ -75,9 +75,5 @@ public class TextUI {
         System.out.println("Hay ganador ");
  
         System.out.println( gameState.getWinner() );
- 
-   
-    
-    
     }
 }

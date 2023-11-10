@@ -15,7 +15,7 @@ public class Main {
    
     public static void main(String[] args) {
        
-        Game juego = new Game(2);
+        Game juego = new Game(1);
     
         TextUI text = new TextUI ();
     

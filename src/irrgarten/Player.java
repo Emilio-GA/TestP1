@@ -64,11 +64,11 @@ public class Player {
     
     
     //Lista de armas
-    private static ArrayList <Weapon> weapons; 
+    private  ArrayList <Weapon> weapons; 
     
     
     //Lista de escudos
-    private static ArrayList <Shield> shields; 
+    private  ArrayList <Shield> shields; 
       
     
     //constructor
@@ -252,11 +252,15 @@ public class Player {
         
         for (int i = 0; i < weapons.size(); i++) {
             
+
             Weapon wi = weapons.get(i);
+            System.out.println("Se comprueba");
+            System.out.println(wi.toString());
             boolean discard = wi.discard();
             
             if (discard) {
-                
+                System.out.println("Se descarta");
+                System.out.println(wi.toString());
                 weapons.remove(wi);
             }
         }
@@ -275,11 +279,17 @@ public class Player {
         
         for (int i = 0; i < shields.size(); i++) {
             
+            
             Shield si = shields.get(i);
+            System.out.println("Se comprueba");
+            System.out.println(si.toString());
+            
             boolean discard = si.discard();
             
+            
             if (discard) {
-                
+                System.out.println("Se descarta");
+                System.out.println(si.toString());
                 shields.remove(si);
             }
         }

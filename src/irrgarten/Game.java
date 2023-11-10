@@ -240,7 +240,6 @@ public class Game {
     //METODO NEXTSTEP
     public boolean nextStep(Directions preferredDirection){
         
-        log = "";
         boolean dead = currentPlayer.dead();
         
         if (!dead){

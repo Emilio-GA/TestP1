@@ -337,8 +337,6 @@ public class Labyrinth {
         
         int[]sol = {ROW, COL};
 
-        Dice d = new Dice();
-
         sol[ROW] = Dice.randomPos(this.nRows);
         sol[COL] = Dice.randomPos(this.nCols);
         

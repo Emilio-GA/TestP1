@@ -70,7 +70,7 @@ public class Game {
         labyrinth = new Labyrinth(5, 6, 3, 3);
         
         this.configureLabyrinth();
-        // spreadPlayers(players);
+        // labyrinth.spreadPlayers(players);
         
     }
     

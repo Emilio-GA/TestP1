@@ -277,7 +277,7 @@ public class Labyrinth {
         
         if (posOK(row, col)){
         
-            return   emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
+            return emptyPos(row, col) || monsterPos(row, col) || exitPos(row, col);
     
         } else {
             
@@ -336,8 +336,6 @@ public class Labyrinth {
     private int[] randomEmptyPos() {
         
         int[]sol = {ROW, COL};
-
-        Dice d = new Dice();
 
         sol[ROW] = Dice.randomPos(this.nRows);
         sol[COL] = Dice.randomPos(this.nCols);

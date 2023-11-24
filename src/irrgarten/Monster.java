@@ -16,7 +16,7 @@ public class Monster {
     
     
     // VARIABLE SALUD INITIAL    
-    private static int INITIAL_HEALTH = 5;
+    private static final int INITIAL_HEALTH = 5;
     
     
     // VARIABLE NOMBRE
@@ -58,11 +58,7 @@ public class Monster {
     // METODO DEAD comprueba si esta muerto
     public boolean dead() {
         
-        if (health <= 0){
-           return true;
-        }else{
-           return false;
-        }
+        return health <= 0;
        
     }
     

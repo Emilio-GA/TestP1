@@ -16,7 +16,7 @@ public class Game {
     
     
     // VARIABLE MAX_ROUNDS
-    private static int MAX_ROUNDS = 10;
+    private static final int MAX_ROUNDS = 10;
     
     
     // VARIABLE CURRENTPLAYERINDEX
@@ -53,7 +53,7 @@ public class Game {
         log = "";
         
         // Jugadores
-        players = new ArrayList<Player> ();
+        players = new ArrayList<> ();
         for (int i = 0; i < nplayers; i++) {
             
             players.add(new Player(Integer.toString(i).charAt(0), Dice.randomIntelligence(), Dice.randomStrength()));
@@ -64,7 +64,7 @@ public class Game {
         
         
         // Monstruos
-        monsters = new ArrayList<Monster> ();
+        monsters = new ArrayList<> ();
         
         // Laberinto
         labyrinth = new Labyrinth(5, 5, 1, 1);

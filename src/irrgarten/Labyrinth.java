@@ -76,8 +76,11 @@ public class Labyrinth {
         
         this.nRows = nRows;
         this.nCols = nCols;
-        this.exitRow = exitRow;
-        this.exitCol = exitCol;
+        //this.exitRow = exitRow;
+        //this.exitCol = exitCol;
+        this.exitRow = 1;
+        this.exitCol = 1;
+        
         
         monsters = new Monster[nRows][nCols];
         players = new Player[nRows][nCols];
@@ -105,6 +108,7 @@ public class Labyrinth {
             Player p = players.get(i);
             
             int[] pos = this.randomEmptyPos();
+            //int[] pos = {0,0};
             
             this.putPlayer2D(-1, -1, pos[ROW], pos[COL], p);
             

@@ -15,13 +15,15 @@ public class Main {
    
     public static void main(String[] args) {
        
-        Game juego = new Game(1);
+        Game juego = new Game(2);
     
         TextUI text = new TextUI ();
     
         Controller controlo = new Controller(juego, text);
     
         controlo.play();
-           
+        
+      
+       
     }
 }

@@ -6,6 +6,7 @@
 package irrgarten;
 
 import java.util.Random;
+import java.util.ArrayList;
 
 
 /**
@@ -171,5 +172,24 @@ public class Dice {
         
         return discard;     
     }
-
+    
+    // METODO NEXTSTEP DE LA PRACTICA 4
+    public static Directions nextStep(Directions preference, ArrayList<Directions> validMoves, float intelligence) {
+        
+        // No queremos una inteligencia que no este entre 0 y 10.
+        assert(intelligence >= 0 && intelligence <= 10);
+        
+        float probabilidad = intelligence / MAX_INTELLIGENCE;
+        
+        if (generator.nextFloat() < probabilidad) {
+            
+            return preference;
+        }
+        
+        else {
+            
+            // Devolver una dirección aleatoria mediante un indice aleatorio del ArrayList
+            return validMoves.get(generator.nextInt(validMoves.size()));
+        }
+    }
 }

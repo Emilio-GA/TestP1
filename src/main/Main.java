@@ -8,9 +8,10 @@ import irrgarten.UI.TextUI;
 import irrgarten.controller.Controller;
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
 public class Main {
    
     public static void main(String[] args) {

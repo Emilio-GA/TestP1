@@ -12,22 +12,13 @@ package irrgarten;
  */
 
 // CLASE QUE REPRESENTA LAS ARMAS QUE USA EL JUGADOR EN LOS ATAQUES DURANTE LOS COMBATES
-public class Weapon {
+public class Weapon extends CombatElement{
     
-    
-    // PODER DEL JUGADOR
-    private float power;
-    
-    
-    // USOS DE UN JUGADOR PARA LAS ARMAS
-    private int uses;
-    
-    
-    // CONSTRUCTOR
+  // CONSTRUCTOR
     public Weapon (float p, int u) {
         
-        power = p;
-        uses = u;
+        super(p,u);
+        
     }
         
     
@@ -36,33 +27,21 @@ public class Weapon {
        DEVUELVE EL VALOR DE POWER. SI NO TIENE USOS LA ARMA SE DEVUELVE 0 */
     public float attack() {
         
-        float sol;
-        
-        if (uses > 0) {
-            
-            uses--;
-            sol = power;
-        
-        } else {
-            
-            sol = 0;
-        }
-        
-        return sol;
+        return produceEffect();
     }
     
     
     // MÉTODO QUE DA EL PODER Y LOS USOS QUE TENDRÁ UN ARMA EN FORMATO TEXTO
     public String toString() {
         
-        return "W[ power " + String.valueOf(power) + ", uses " + Integer.toString(uses) + "]";
+        return "W[ power " + super.toString();
     }
     
     
     // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADA
     public boolean discard() {
         
-        return Dice.discardElement(uses);
+        return super.discard();
         
     }
 }

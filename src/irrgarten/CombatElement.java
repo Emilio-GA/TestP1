@@ -8,6 +8,41 @@ package irrgarten;
  *
  * @author egalv
  */
-public class CombatElement {
+abstract public class CombatElement {
+        
+    // PROTECCION DEL JUGADOR
+    private float effect;
     
+    
+    // USO DE UN JUGADOR PARA LOS ESCUDOS
+    private int uses;
+    
+    public CombatElement(float effect, int uses){
+        this.effect= effect;
+        this.uses = uses;
+    }
+    
+    float produceEffect(){
+        if (this.uses > 0){
+            
+            uses--;
+            return effect;
+        
+        }else{
+            
+            return 0;
+        }
+        
+    }
+    
+    public boolean discard(){
+        
+        return Dice.discardElement(uses);
+    }
+    
+     public String toString(){
+        
+        return   String.valueOf(effect) + ", uses " + Integer.toString(uses)+ "]";
+        
+    }
 }

@@ -8,6 +8,26 @@ package irrgarten;
  *
  * @author egalv
  */
-public class FuzzyPlayer {
+public class FuzzyPlayer extends Player {
+ /**   
+    public FuzzyPlayer(Player other){
+        
+    }
     
+    public Directions move(Directions direction, ArrayList <Directions> validMoves){
+        
+    }
+    
+    public float attack(){
+        
+    }
+    
+    float defensiveEnergy(){
+        
+    }
+    
+    public String toString(){
+        
+    }
+   **/     
 }

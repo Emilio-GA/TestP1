@@ -16,7 +16,7 @@ public class Game {
     
     
     // VARIABLE MAX_ROUNDS
-    private static int MAX_ROUNDS = 10;
+    private static final int MAX_ROUNDS = 10;
     
     
     // VARIABLE CURRENTPLAYERINDEX
@@ -53,7 +53,7 @@ public class Game {
         log = "";
         
         // Jugadores
-        players = new ArrayList<Player> ();
+        players = new ArrayList<> ();
         for (int i = 0; i < nplayers; i++) {
             
             players.add(new Player(Integer.toString(i).charAt(0), Dice.randomIntelligence(), Dice.randomStrength()));
@@ -64,10 +64,10 @@ public class Game {
         
         
         // Monstruos
-        monsters = new ArrayList<Monster> ();
+        monsters = new ArrayList<> ();
         
         // Laberinto
-        labyrinth = new Labyrinth(5, 6, 3, 3);
+        labyrinth = new Labyrinth(5, 5, 1, 1);
         
         this.configureLabyrinth();
         // labyrinth.spreadPlayers(players);
@@ -121,8 +121,8 @@ public class Game {
     private void configureLabyrinth() {
         
        // Monstruos
-       Monster m1 = new Monster("m1", 100, 100);
-       Monster m2 = new Monster("m2", Dice.randomIntelligence(), Dice.randomStrength());
+      Monster m1 = new Monster("m1", Dice.randomIntelligence(), Dice.randomStrength());
+      Monster m2 = new Monster("m2", Dice.randomIntelligence(), Dice.randomStrength());
        Monster m3 = new Monster("m3", Dice.randomIntelligence(), Dice.randomStrength());
        Monster m4 = new Monster("m4", Dice.randomIntelligence(), Dice.randomStrength());
     
@@ -130,12 +130,14 @@ public class Game {
        labyrinth.addMonster(0, 1, m1);
        labyrinth.addMonster(1, 2, m2);
        labyrinth.addMonster(2, 3, m3);
-       labyrinth.addMonster(3, 4, m4);
+        
+       labyrinth.addMonster(2, 2, m4);
        
        // Guardar en contenedor
        monsters.add(m1);
        monsters.add(m2);
        monsters.add(m3);
+
        monsters.add(m4);
        
        // Bloques de obstaculos
@@ -239,6 +241,7 @@ public class Game {
     
     //METODO NEXTSTEP
     public boolean nextStep(Directions preferredDirection){
+        
         
         boolean dead = currentPlayer.dead();
         

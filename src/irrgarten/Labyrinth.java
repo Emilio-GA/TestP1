@@ -16,31 +16,31 @@ import java.util.ArrayList;
 public class Labyrinth {
     
     // VARIABLE ESTATICA
-    private static char BLOCK_CHAR = 'X';
+    private static final char BLOCK_CHAR = 'X';
     
     
     // VARIABLE ESTATICA
-    private static char EMPTY_CHAR = '-';
+    private static final char EMPTY_CHAR = '-';
     
     
     // VARIABLE ESTATICA
-    private static char MONSTER_CHAR = 'M';
+    private static final char MONSTER_CHAR = 'M';
     
     
     // VARIABLE ESTATICA
-    private static char COMBAT_CHAR = 'C';
+    private static final char COMBAT_CHAR = 'C';
     
     
     // VARIABLE ESTATICA
-    private static char EXIT_CHAR = 'E';
+    private static final char EXIT_CHAR = 'E';
     
     
     // VARIABLE ESTATICA
-    private static int ROW = 0;
+    private static final int ROW = 0;
     
     
     // VARIABLE ESTATICA
-    private static int COL = 1;
+    private static final int COL = 1;
     
     
     // FILAS
@@ -76,8 +76,11 @@ public class Labyrinth {
         
         this.nRows = nRows;
         this.nCols = nCols;
-        this.exitRow = exitRow;
-        this.exitCol = exitCol;
+        //this.exitRow = exitRow;
+        //this.exitCol = exitCol;
+        this.exitRow = 1;
+        this.exitCol = 1;
+        
         
         monsters = new Monster[nRows][nCols];
         players = new Player[nRows][nCols];
@@ -308,22 +311,22 @@ public class Labyrinth {
         
         int[] sol = {row, col};
         
-        if (direction == direction.DOWN) {
+        if (direction == Directions.DOWN) {
             
             sol[ROW]++;
         }
         
-        if (direction == direction.UP) {
+        if (direction == Directions.UP) {
             
             sol[ROW]--;
         }
         
-        if (direction == direction.LEFT) {
+        if (direction == Directions.LEFT) {
             
             sol[COL]--;
         }
         
-        if (direction == direction.RIGHT) {
+        if (direction == Directions.RIGHT) {
             
             sol[COL]++;
         }

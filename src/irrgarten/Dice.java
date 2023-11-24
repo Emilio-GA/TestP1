@@ -19,43 +19,43 @@ public class Dice {
     
     
     // VARIABLE QUE REPRESENTA EL NÚMERO MAXIMO DE USOS DE ARMAS Y ESCUDOS
-    private static int MAX_USES = 5;
+    private static final int MAX_USES = 5;
     
     
     // VARIABLE QUE REPRESENTA EL VALOR MAXIMO PARA LA INTELIGENCIA DE JUGADORES Y MOSNTRUOS
-    private static float MAX_INTELLIGENCE = 10.0f;
+    private static final float MAX_INTELLIGENCE = 10.0f;
     
     
     // VARIABLE QUE REPRESENTA EL VALOR MAXIMO PARA LA FUERZA DE JUGADORES Y MOSNTRUOS
-    private static float MAX_STRENGTH = 10.0f;
+    private static final float MAX_STRENGTH = 10.0f;
     
     
     // VARIABLE QUE REPRESENTA LA PROBABILIDAD DE QUE UN JUGADOR SEA RESUCITADO EN CADA TURNO
-    private static float RESURRECT_PROB = 0.3f;
+    private static final float RESURRECT_PROB = 0.3f;
     
     
     // VARIABLE QUE REPRESENTA EL NUMERO MAXIMO DE ARMAS RECIBIDAS AL GANAR UN COMBATE
-    private static int WEAPONS_REWARD = 2;
+    private static final int WEAPONS_REWARD = 2;
     
     
     // VARIABLE QUE REPRESENTA EL NUMERO MAXIMO DE ESCUDOS RECIBIDOS AL GANAR UN COMBATE
-    private static int SHIELDS_REWARD = 3;
+    private static final int SHIELDS_REWARD = 3;
     
     
     // VARIABLE QUE REPRESENTA EL NUMERO MAXIMO DE UNIDADES DE SALUD RECIBIDAS AL GANAR UN COMBATE
-    private static int HEALTH_REWARD = 5;
+    private static final int HEALTH_REWARD = 5;
     
     
     // VARIABLE QUE REPRESENTA LA MAXIMA POTENCIA DE LAS ARMAS
-    private static int MAX_ATTACK = 3;
+    private static final int MAX_ATTACK = 3;
     
     
     // VARIABLE QUE REPRESENTA LA MAXIMA POTENCIA DE LOS ESCUDOS
-    private static int MAX_SHIELD = 2;
+    private static final int MAX_SHIELD = 2;
     
     
     // VARIABLE QUE GENERA NUMEROS ALEATORIOS
-    private static Random generator = new Random();
+    private static final Random generator = new Random();
     
     
     // METODO QUE DEVUELVE UN NUMERO DE FILA O COLUMNA ALEATORIA SIENDO EL PARAMETRO
@@ -91,16 +91,7 @@ public class Dice {
     // METODO QUE INDICA SI UN JUGADOR MUERTO DEBE SER RESUCITADO O NO
     public static boolean resurrectPlayer() {
         
-        boolean resurrected;
-        
-        if (generator.nextFloat() < RESURRECT_PROB) {
-            
-            resurrected = true;
-        
-        } else {
-            
-            resurrected = false;
-        }
+        boolean resurrected = generator.nextFloat() < RESURRECT_PROB;
         
         return resurrected;
     }
@@ -159,16 +150,7 @@ public class Dice {
     // LAS ARMAS CON MÁS USOS POSIBLES ES MENOS PROBABLE QUE SEAN DESCARTADOS Y VICEVERSA
     public static boolean discardElement(int usesLeft) {
         
-        boolean discard;
-        
-        if (generator.nextFloat() < 1.0 * (MAX_USES - usesLeft) / MAX_USES) {
-            
-            discard = true;
-        
-        } else {
-            
-            discard = false;
-        }
+        boolean discard = generator.nextFloat() < 1.0 * (MAX_USES - usesLeft) / MAX_USES;
         
         return discard;     
     }

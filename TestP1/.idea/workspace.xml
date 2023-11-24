@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50a2edeb-562e-4b8d-ae9d-4843316b84c5" name="Changes" comment="PRUEBA">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestP1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/TestP1.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.rb" beforeDir="false" afterPath="$PROJECT_DIR$/a.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/irrgarten/UI/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/irrgarten/UI/TextUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/irrgarten/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/irrgarten/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/irrgarten/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/irrgarten/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/irrgarten/Labyrinth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/irrgarten/Labyrinth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/irrgarten/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/irrgarten/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/egalv/Desktop/UNI3/Nueva carpeta/Practica1/TestP1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging master",
+    "last_opened_file_path": "C:/Users/egalv/Desktop/UNI3/Nueva carpeta/TestP1_Ruby (2)/TestP1_Ruby",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TestP1" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="TestP1" />
@@ -102,6 +102,7 @@
       <workItem from="1699388998291" duration="2935000" />
       <workItem from="1699432769960" duration="662000" />
       <workItem from="1699521899922" duration="643000" />
+      <workItem from="1700219963118" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="PRUEBA">
       <option name="closed" value="true" />

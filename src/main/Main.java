@@ -23,6 +23,5 @@ public class Main {
         Controller controlo = new Controller(juego, text);
     
         controlo.play();
-           
     }
 }

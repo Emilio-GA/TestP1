@@ -16,19 +16,19 @@ public class Player {
     
     
     // Maximo de armas
-    private static int MAX_WEAPONS = 2;
+    private static final int MAX_WEAPONS = 2;
     
     
     // Maximo escudos
-    private static int MAX_SHIELDS = 3;
+    private static final int MAX_SHIELDS = 3;
     
     
     // SALUD INICIAL
-    private static int INITIAL_HEALTH = 10;
+    private static final int INITIAL_HEALTH = 10;
     
     
     // GOLPES ANTES DE PERDER
-    private static int HITS2LOSE = 3;
+    private static final int HITS2LOSE = 3;
     
     
     //NOMBRE
@@ -64,11 +64,11 @@ public class Player {
     
     
     //Lista de armas
-    private static ArrayList <Weapon> weapons; 
+    private final  ArrayList <Weapon> weapons; 
     
     
     //Lista de escudos
-    private static ArrayList <Shield> shields; 
+    private final  ArrayList <Shield> shields; 
       
     
     //constructor
@@ -137,14 +137,7 @@ public class Player {
     // Comprueba si esta muerto
     public boolean dead(){
         
-        if (health <= 0){
-           
-            return true;
-        
-        } else {
-           
-            return false;
-        }
+        return health <= 0;
     }
     
     
@@ -252,11 +245,15 @@ public class Player {
         
         for (int i = 0; i < weapons.size(); i++) {
             
+
             Weapon wi = weapons.get(i);
+            System.out.println("Se comprueba");
+            System.out.println(wi.toString());
             boolean discard = wi.discard();
             
             if (discard) {
-                
+                System.out.println("Se descarta");
+                System.out.println(wi.toString());
                 weapons.remove(wi);
             }
         }
@@ -275,11 +272,17 @@ public class Player {
         
         for (int i = 0; i < shields.size(); i++) {
             
+            
             Shield si = shields.get(i);
+            System.out.println("Se comprueba");
+            System.out.println(si.toString());
+            
             boolean discard = si.discard();
             
+            
             if (discard) {
-                
+                System.out.println("Se descarta");
+                System.out.println(si.toString());
                 shields.remove(si);
             }
         }

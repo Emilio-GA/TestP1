@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class TextUI {
     
-    private static Scanner in = new Scanner(System.in);
+    private static final Scanner in = new Scanner(System.in);
     
     private char readChar() {
         String s = in.nextLine();     
@@ -26,26 +26,26 @@ public class TextUI {
         while (!gotInput) {
             char c = readChar();
             switch(c) {
-                case 'w':
+                case 'w' -> {
                     System.out.print(" UP\n");
                     direction = Directions.UP;
                     gotInput = true;
-                    break;
-                case 's':
+                }
+                case 's' -> {
                     System.out.print(" DOWN\n");
                     direction = Directions.DOWN;
                     gotInput = true;
-                    break;
-                case 'd':
+                }
+                case 'd' -> {
                     System.out.print("RIGHT\n");
                     direction = Directions.RIGHT;
                     gotInput = true;
-                    break;
-                case 'a':
+                }
+                case 'a' -> {
                     System.out.print(" LEFT\n");
                     direction = Directions.LEFT;
-                    gotInput = true;    
-                    break;
+                    gotInput = true;
+                }
             }
         }    
         return direction;

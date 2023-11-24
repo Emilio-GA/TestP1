@@ -92,5 +92,6 @@ public class GameState {
     public Boolean getWinner() {
     
         return winner;
-    }    
+    }   
+    
 }

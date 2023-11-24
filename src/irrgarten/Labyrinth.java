@@ -99,6 +99,13 @@ public class Labyrinth {
         labyrinth[exitRow][exitCol] = EXIT_CHAR;
     }
     
+    //P4
+    public LabyrinthCharacter(LabyrinthCharacter other ){
+       // this()con todos los atributos
+       //mapa player
+       //mapa laberinto
+        
+    }
     
     // METODO SPREADPLAYERS
     public void spreadPlayers(ArrayList<Player> players) {

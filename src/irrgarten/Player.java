@@ -91,6 +91,11 @@ public class Player {
     
     }
     
+    //P4
+    public Player(Player other){
+        super()
+    }
+    
     
     //resucitar
     public void resurrect(){

@@ -9,11 +9,11 @@ package irrgarten;
  * @author egalv
  */
 public class FuzzyPlayer extends Player {
- /**   
+   
     public FuzzyPlayer(Player other){
-        
+      super(other);  
     }
-    
+  /**  
     public Directions move(Directions direction, ArrayList <Directions> validMoves){
         
     }

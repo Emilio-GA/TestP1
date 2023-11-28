@@ -40,11 +40,11 @@ public class Player extends LabyrinthCharacter {
     
     
     //Lista de armas
-    private final  ArrayList <Weapon> weapons; 
+    private ArrayList <Weapon> weapons; 
     
     
     //Lista de escudos
-    private final  ArrayList <Shield> shields; 
+    private ArrayList <Shield> shields; 
     
     
     // WeaponCardDeck

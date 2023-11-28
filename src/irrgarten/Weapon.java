@@ -34,14 +34,6 @@ public class Weapon extends CombatElement{
     // MÉTODO QUE DA EL PODER Y LOS USOS QUE TENDRÁ UN ARMA EN FORMATO TEXTO
     public String toString() {
         
-        return "W[ power " + super.toString();
-    }
-    
-    
-    // MÉTODO QUE DECIDE SI UN ARMA DEBE SER DESCARTADA
-    public boolean discard() {
-        
-        return super.discard();
-        
+        return "W " + super.toString();
     }
 }

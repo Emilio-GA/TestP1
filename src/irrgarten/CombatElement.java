@@ -5,11 +5,14 @@
 package irrgarten;
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
-abstract public class CombatElement {
+
+// CLASE COMBATELEMENT
+public abstract class CombatElement {
         
+    
     // PROTECCION DEL JUGADOR
     private float effect;
     
@@ -17,18 +20,22 @@ abstract public class CombatElement {
     // USO DE UN JUGADOR PARA LOS ESCUDOS
     private int uses;
     
+    
+    // METODOS
     public CombatElement(float effect, int uses){
+        
         this.effect= effect;
         this.uses = uses;
     }
     
-    float produceEffect(){
+    protected float produceEffect(){
+        
         if (this.uses > 0){
             
             uses--;
             return effect;
         
-        }else{
+        } else{
             
             return 0;
         }
@@ -40,9 +47,9 @@ abstract public class CombatElement {
         return Dice.discardElement(uses);
     }
     
-     public String toString(){
+    public String toString(){
         
-        return   String.valueOf(effect) + ", uses " + Integer.toString(uses)+ "]";
+        return "[effect " + String.valueOf(effect) + ", uses " + Integer.toString(uses)+ "]";
         
     }
 }

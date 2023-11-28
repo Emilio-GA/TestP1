@@ -5,10 +5,12 @@
 package irrgarten;
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
-public class FuzzyPlayer extends Player {
+
+// CLASE FUZZYPLAYER
+public class FuzzyPlayer extends Player { 
  /**   
     public FuzzyPlayer(Player other){
         

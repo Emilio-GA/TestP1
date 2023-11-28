@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 
 // CLASE QUE REPRESENTA A LOS JUGADORES DEL JUEGO
-public class Player {
+public class Player extends LabyrinthCharacter {
     
     
     // Maximo de armas
@@ -31,32 +31,8 @@ public class Player {
     private static final int HITS2LOSE = 3;
     
     
-    //NOMBRE
-    private String name;
-    
-    
     //numero
     private char number;
-    
-    
-    //intelligence
-    private float intelligence;
-    
-    
-    //fuerza
-    private float strength;
-    
-    
-    //salud
-    private float health;
-    
-    
-    //fila
-    private int row;
-    
-    
-    //columna
-    private int col;
     
     
     //golpes consecutivos
@@ -69,26 +45,53 @@ public class Player {
     
     //Lista de escudos
     private final  ArrayList <Shield> shields; 
-      
     
-    //constructor
+    
+    // WeaponCardDeck
+    private WeaponCardDeck weaponCardDeck;
+    
+    
+    //ShieldCardDeck
+    private ShieldCardDeck shieldCardDeck;
+    
+    //constructor TO-DO: es correcto?
     public Player (char number, float intelligence, float strength){
         
-        this.name = "Player " + number;
+        super("Player " + number, intelligence, strength, INITIAL_HEALTH);
+        
         this.number = number;
-        this.intelligence = intelligence;
-        this.strength = strength;
+        consecutiveHits = 0;
         
         shields = new ArrayList <>();
-        
         weapons = new ArrayList <>();
         
-
-        health = INITIAL_HEALTH;
-        row = -1;
-        col = -1;
-        consecutiveHits = 0;
+        // TO-DO: como inicializar el weapon y shield cardDeck. CORRECTO?
+        weaponCardDeck = new WeaponCardDeck();
+        shieldCardDeck = new ShieldCardDeck();
+        
+        
+        
+        // TO-DO: cuando se añade override    
+    }
     
+    
+    // constructor de copia
+    public Player(Player other) {
+        
+        // LLamada a constructor de copia de LabyrinthCharacter
+        super(other); 
+        
+        // Atributos propios
+        number = other.number;
+        consecutiveHits = other.consecutiveHits;
+        shields = other.shields;
+        weapons = other.weapons;
+        
+        // TO-DO: a que se refiere con incluyendo la posicion
+        
+        // TO-DO: como inicializar el weapon y shield cardDeck. CORRECTO?
+        weaponCardDeck = new WeaponCardDeck();
+        shieldCardDeck = new ShieldCardDeck();
     }
     
     
@@ -96,48 +99,17 @@ public class Player {
     public void resurrect(){
         
         this.resetHits();
-        health = INITIAL_HEALTH;
+        this.setHealth(INITIAL_HEALTH);
 
         weapons.clear();
         shields.clear();
-    
-    }   
-    
-    
-    // devolver fila
-    public int getRow(){
-        
-        return row;
-    }
-   
-    
-    // devolver columna
-    public int getCol(){
-        
-        return col;
-    }
+    }  
     
     
     // devolver numero del jugador
     public char getNumber(){
         
         return number;    
-    }
-    
-    
-    // Establecer una posición
-    public void setPos(int row, int col){
-        
-        this.row = row;
-        this.col = col;
-        
-    }
-    
-    
-    // Comprueba si esta muerto
-    public boolean dead(){
-        
-        return health <= 0;
     }
     
     
@@ -160,13 +132,15 @@ public class Player {
     
     
     // Devuelve fuerza del ataque
+    @Override
     public float attack(){
         
-        return strength+this.sumWeapons();
+        return this.getStrength()+this.sumWeapons();
     }
         
     
     // Metodo defend
+    @Override
     public boolean defend(float receivedAttack){
         
         return this.manageHit(receivedAttack);
@@ -181,21 +155,31 @@ public class Player {
          
          for (int i = 0; i < wReward; i++){
              
-            Weapon wnew = newWeapon();
+            //Weapon wnew = newWeapon();
             
-            receiveWeapon(wnew);
+            //receiveWeapon(wnew);
             
+            
+            // TO-DO: como sustituir creación de Weapon por llamada a nextcard de weaponcarddeck. CORRECTO?
+            WeaponCardDeck w = new WeaponCardDeck();
+            w.nextCard();
          }
          
          for (int i = 0; i < sReward ; i++){
              
-            Shield snew = newShield();
+            //Shield snew = newShield();
             
-            receiveShield(snew);
+            //receiveShield(snew);
             
+            
+            // TO-DO: como sustituir creación de Shield por llamada a nextcard de shieldcarddeck. CORRECTO?
+            ShieldCardDeck s = new ShieldCardDeck();
+            s.nextCard();
          }
          
          int extraHealth = Dice.healthReward();
+         
+         float health = this.getHealth();
          
          health += extraHealth;
 
@@ -205,11 +189,8 @@ public class Player {
     // METODO TOSTRING
     public String toString() {
         
-        return "Player[ "+ name +" , Number: "+ number + ",  Intelligence: " + String.valueOf(intelligence) + 
-        ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
-        ", Row and Col " + Integer.toString(row) + ", " + Integer.toString(col)  + 
-        ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) + ", Shields: " +stringShields() + 
-        ", Weapons: " +stringWeapons() +  " ]";
+        return super.toString() + ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) 
+        + ", Shields: " +stringShields() + ", Weapons: " +stringWeapons() +  " ]";
     }
     
     
@@ -315,7 +296,7 @@ public class Player {
     
     
     // SUMA LA FUERZA DE TODAS LAS ARMAS
-    private float sumWeapons(){
+    protected float sumWeapons(){
         
         float suma=0;
         
@@ -329,7 +310,8 @@ public class Player {
     
     
     // SUMA LA PROTECCIÓN DE TODOS LOS ESCUDOS
-    private float sumShields(){
+    protected float sumShields(){
+        
         float suma=0;
         
         for (int i= 0 ; i < shields.size(); i++){
@@ -343,14 +325,14 @@ public class Player {
     
     
     //DEVUELVE LA SUMA DE PROTECCIÓN DE LOS ESCUDOS MAS LA INTELIGENCIA
-    private float defensiveEnergy(){
+    protected float defensiveEnergy(){
         
-        return intelligence+this.sumShields();
+        return this.getIntelligence()+this.sumShields();
     }
     
     
     // METODO manageHit
-    boolean manageHit(float receivedAttack){
+    private boolean manageHit(float receivedAttack){
     
         boolean lose;
         float defense = this.defensiveEnergy();
@@ -385,14 +367,7 @@ public class Player {
         consecutiveHits = 0;
     }
     
-    
-    // QUITA SALUD
-    private void gotWounded(){
-        
-        this.health--;
-    }
-    
-    
+   
     //AÑADE GOLPES CONSECUTIVOS
     private void incConsecutiveHits(){
         

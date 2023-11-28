@@ -17,14 +17,15 @@ public class Shield extends CombatElement {
     
     // CONSTRUCTOR
     public Shield (float valorpro, int valoru){
-           super(valorpro, valoru);
+        
+        super(valorpro, valoru);
     }
     
     
     // METODO QUE REPRESENTA LA INTENSIDAD DE LA DEFENSA DEL JUGADOR
     public float protect (){
-        return produceEffect();
-           
+        
+        return produceEffect(); 
     }
     
     
@@ -32,12 +33,5 @@ public class Shield extends CombatElement {
     public String toString(){        
         
         return "S[ protection " + super.toString();
-    }
-    
-    
-    // MÉTODO QUE DECIDE SI UN ESCUDO DEBE SER DESCARTADO
-    public boolean discard() {
-        
-        return discard();
     }
 }

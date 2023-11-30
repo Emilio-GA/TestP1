@@ -230,6 +230,15 @@ public class Game {
         if (resurrect){
             
             currentPlayer.resurrect();
+            
+            FuzzyPlayer fp = new FuzzyPlayer(this.currentPlayer);
+            
+            currentPlayer = fp;
+            
+            players.set(this.currentPlayerIndex, fp);
+            
+            this.labyrinth.updatePlayer(fp);
+            
             logResurrected();
              
         } else {

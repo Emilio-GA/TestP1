@@ -230,6 +230,15 @@ public class Game {
         if (resurrect){
             
             currentPlayer.resurrect();
+            
+            FuzzyPlayer fp = new FuzzyPlayer(this.currentPlayer);
+            
+            currentPlayer = fp;
+            
+            players.set(this.currentPlayerIndex, fp);
+            
+            this.labyrinth.updatePlayer(fp);
+            
             logResurrected();
              
         } else {
@@ -313,7 +322,7 @@ public class Game {
     // METODO LOGPLAYERNOORDERS
     private void logPlayerNoOrders() {
         
-        log += "Jugador no ha seguido las instrucciones del jugador humano (nofue posible).\n";
+        log += "Jugador no ha seguido las instrucciones del jugador humano (no fue posible).\n";
     }
     
     

@@ -99,14 +99,16 @@ public class Labyrinth {
         labyrinth[exitRow][exitCol] = EXIT_CHAR;
     }
     
-    //P4
-    public LabyrinthCharacter(LabyrinthCharacter other ){
+   public void updatePlayer (Player current){
        
-        // this()con todos los atributos
-       //mapa player
-       //mapa laberinto
-        
-    }
+       this.updateOldPos(current.getRow(), current.getCol());
+       
+       this.putPlayer2D(-1, -1, current.getRow(), current.getCol(), current);
+       
+      
+   }
+
+    
     
     // METODO SPREADPLAYERS
     public void spreadPlayers(ArrayList<Player> players) {

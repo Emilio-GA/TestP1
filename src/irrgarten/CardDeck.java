@@ -34,7 +34,7 @@ public abstract class CardDeck<T> {
     
     public T nextCard() {
         
-        // TO-DO: bien hecho?
+        
         if (cardDeck.isEmpty()) {
             
             this.addCards();

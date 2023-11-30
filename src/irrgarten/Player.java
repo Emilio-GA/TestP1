@@ -55,9 +55,13 @@ public class Player extends LabyrinthCharacter {
     private ShieldCardDeck shieldCardDeck;
     
     
+
     // CONSTRUCTOR
+
+
     public Player (char number, float intelligence, float strength){
         
+
         super("Player#" + number, intelligence, strength, INITIAL_HEALTH);
         
         this.number = number;
@@ -67,7 +71,10 @@ public class Player extends LabyrinthCharacter {
         weapons = new ArrayList <>();
         
         weaponCardDeck = new WeaponCardDeck();
+
         shieldCardDeck = new ShieldCardDeck();   
+
+        shieldCardDeck = new ShieldCardDeck();
     }
     
     
@@ -82,7 +89,7 @@ public class Player extends LabyrinthCharacter {
         consecutiveHits = other.consecutiveHits;
         shields = other.shields;
         weapons = other.weapons;
-        
+
         setPos(other.getRow(), other.getCol());
         
         weaponCardDeck = new WeaponCardDeck();
@@ -143,8 +150,9 @@ public class Player extends LabyrinthCharacter {
     
   
     // Recibir premio
-     public void receiveReward(){
+    public void receiveReward(){
          
+
          int wReward = Dice.weaponsReward();
          int sReward = Dice.shieldsReward();
          
@@ -171,8 +179,7 @@ public class Player extends LabyrinthCharacter {
          float health = this.getHealth();
          
          health += extraHealth;
-
-     }
+    }
     
     
     // METODO TOSTRING

@@ -33,8 +33,8 @@ public abstract class LabyrinthCharacter {
     public LabyrinthCharacter(LabyrinthCharacter other) {
         
         this(other.name, other.intelligence, other.strength, other.health);
-        row = 0; // TO- DO: a que valor inicializar
-        col = 0; // TO- DO: a que valor inicializar        
+        row = other.row; 
+        col = other.col;        
     }
     
     // METODOS

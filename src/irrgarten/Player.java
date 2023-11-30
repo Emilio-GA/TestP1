@@ -54,10 +54,11 @@ public class Player extends LabyrinthCharacter {
     //ShieldCardDeck
     private ShieldCardDeck shieldCardDeck;
     
-    //constructor TO-DO: es correcto?
+    
+    // CONSTRUCTOR
     public Player (char number, float intelligence, float strength){
         
-        super("Player " + number, intelligence, strength, INITIAL_HEALTH);
+        super("Player#" + number, intelligence, strength, INITIAL_HEALTH);
         
         this.number = number;
         consecutiveHits = 0;
@@ -65,13 +66,8 @@ public class Player extends LabyrinthCharacter {
         shields = new ArrayList <>();
         weapons = new ArrayList <>();
         
-        // TO-DO: como inicializar el weapon y shield cardDeck. CORRECTO?
         weaponCardDeck = new WeaponCardDeck();
-        shieldCardDeck = new ShieldCardDeck();
-        
-        
-        
-        // TO-DO: cuando se añade override    
+        shieldCardDeck = new ShieldCardDeck();   
     }
     
     
@@ -87,9 +83,8 @@ public class Player extends LabyrinthCharacter {
         shields = other.shields;
         weapons = other.weapons;
         
-        // TO-DO: a que se refiere con incluyendo la posicion
+        setPos(other.getRow(), other.getCol());
         
-        // TO-DO: como inicializar el weapon y shield cardDeck. CORRECTO?
         weaponCardDeck = new WeaponCardDeck();
         shieldCardDeck = new ShieldCardDeck();
     }
@@ -159,10 +154,7 @@ public class Player extends LabyrinthCharacter {
             
             //receiveWeapon(wnew);
             
-            
-            // TO-DO: como sustituir creación de Weapon por llamada a nextcard de weaponcarddeck. CORRECTO?
-            WeaponCardDeck w = new WeaponCardDeck();
-            w.nextCard();
+             receiveWeapon(weaponCardDeck.nextCard());
          }
          
          for (int i = 0; i < sReward ; i++){
@@ -171,10 +163,7 @@ public class Player extends LabyrinthCharacter {
             
             //receiveShield(snew);
             
-            
-            // TO-DO: como sustituir creación de Shield por llamada a nextcard de shieldcarddeck. CORRECTO?
-            ShieldCardDeck s = new ShieldCardDeck();
-            s.nextCard();
+            receiveShield(shieldCardDeck.nextCard());
          }
          
          int extraHealth = Dice.healthReward();

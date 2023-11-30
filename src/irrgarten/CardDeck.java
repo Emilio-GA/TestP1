@@ -34,7 +34,6 @@ public abstract class CardDeck<T> {
     
     public T nextCard() {
         
-        
         if (cardDeck.isEmpty()) {
             
             this.addCards();

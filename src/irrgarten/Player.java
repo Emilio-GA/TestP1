@@ -73,8 +73,6 @@ public class Player extends LabyrinthCharacter {
         weaponCardDeck = new WeaponCardDeck();
 
         shieldCardDeck = new ShieldCardDeck();   
-
-        shieldCardDeck = new ShieldCardDeck();
     }
     
     

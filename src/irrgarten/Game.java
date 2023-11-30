@@ -322,7 +322,7 @@ public class Game {
     // METODO LOGPLAYERNOORDERS
     private void logPlayerNoOrders() {
         
-        log += "Jugador no ha seguido las instrucciones del jugador humano (nofue posible).\n";
+        log += "Jugador no ha seguido las instrucciones del jugador humano (no fue posible).\n";
     }
     
     

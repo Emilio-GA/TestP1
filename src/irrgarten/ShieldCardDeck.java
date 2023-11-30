@@ -17,8 +17,10 @@ public class ShieldCardDeck extends CardDeck<Shield> {
     @Override
     protected void addCards() {
        
-        // TO-DO: resolver esto
-        // super.addCard(...);
+        super.addCard(new Shield(1, 5));
+        super.addCard(new Shield(1, 5));
+        super.addCard(new Shield(1, 5));
+        super.addCard(new Shield(1, 5));
         
     }
 }

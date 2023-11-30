@@ -17,7 +17,9 @@ public class WeaponCardDeck extends CardDeck<Weapon> {
     @Override
     protected void addCards() {
         
-        // TO-DO: resolver esto
-        // super.addCard(...);
+        super.addCard(new Weapon(1, 5));
+        super.addCard(new Weapon(1, 5));
+        super.addCard(new Weapon(1, 5));
+        super.addCard(new Weapon(1, 5));
     }
 }

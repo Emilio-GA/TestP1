@@ -21,6 +21,5 @@ public class ShieldCardDeck extends CardDeck<Shield> {
         super.addCard(new Shield(1, 5));
         super.addCard(new Shield(1, 5));
         super.addCard(new Shield(1, 5));
-        
     }
 }

@@ -67,7 +67,7 @@ public class Game {
         monsters = new ArrayList<> ();
         
         // Laberinto
-        labyrinth = new Labyrinth(5, 5, 1, 1);
+        labyrinth = new Labyrinth(5, 5, 0, 0);
         
         this.configureLabyrinth();
         // labyrinth.spreadPlayers(players);

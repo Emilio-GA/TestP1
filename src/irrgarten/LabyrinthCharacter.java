@@ -34,7 +34,7 @@ public abstract class LabyrinthCharacter {
         
         this(other.name, other.intelligence, other.strength, other.health);
         row = other.row; 
-        col = other.col;     
+        col = other.col;         
     }
     
     // METODOS

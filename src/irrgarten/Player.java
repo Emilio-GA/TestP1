@@ -55,20 +55,24 @@ public class Player extends LabyrinthCharacter {
     private ShieldCardDeck shieldCardDeck;
     
     
+
+    // CONSTRUCTOR
+
+
     public Player (char number, float intelligence, float strength){
         
-        super("Player# " + number, intelligence, strength, INITIAL_HEALTH);
+
+        super("Player#" + number, intelligence, strength, INITIAL_HEALTH);
         
         this.number = number;
         consecutiveHits = 0;
         
         shields = new ArrayList <>();
         weapons = new ArrayList <>();
-                
-        weaponCardDeck = new WeaponCardDeck();
-        shieldCardDeck = new ShieldCardDeck();
         
- 
+        weaponCardDeck = new WeaponCardDeck();
+
+        shieldCardDeck = new ShieldCardDeck();   
     }
     
     
@@ -83,8 +87,9 @@ public class Player extends LabyrinthCharacter {
         consecutiveHits = other.consecutiveHits;
         shields = other.shields;
         weapons = other.weapons;
-        
 
+        setPos(other.getRow(), other.getCol());
+        
         weaponCardDeck = new WeaponCardDeck();
         shieldCardDeck = new ShieldCardDeck();
     }
@@ -146,33 +151,33 @@ public class Player extends LabyrinthCharacter {
     // Recibir premio
     public void receiveReward(){
          
-        int wReward = Dice.weaponsReward();
-        int sReward = Dice.shieldsReward();
 
-        for (int i = 0; i < wReward; i++){
-
-           //Weapon wnew = newWeapon();
-
-           //receiveWeapon(wnew);
-
-           receiveWeapon(weaponCardDeck.nextCard());
-        }
-
-        for (int i = 0; i < sReward ; i++){
-
-           //Shield snew = newShield();
-
-           //receiveShield(snew);
-
-           receiveShield(shieldCardDeck.nextCard());
-        }
-           
-        int extraHealth = Dice.healthReward();
-
-        float health = this.getHealth();
-
-        health += extraHealth;
-
+         int wReward = Dice.weaponsReward();
+         int sReward = Dice.shieldsReward();
+         
+         for (int i = 0; i < wReward; i++){
+             
+            //Weapon wnew = newWeapon();
+            
+            //receiveWeapon(wnew);
+            
+             receiveWeapon(weaponCardDeck.nextCard());
+         }
+         
+         for (int i = 0; i < sReward ; i++){
+             
+            //Shield snew = newShield();
+            
+            //receiveShield(snew);
+            
+            receiveShield(shieldCardDeck.nextCard());
+         }
+         
+         int extraHealth = Dice.healthReward();
+         
+         float health = this.getHealth();
+         
+         health += extraHealth;
     }
     
     

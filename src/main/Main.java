@@ -4,6 +4,7 @@
  */
 package main;
 import irrgarten.Game;
+import irrgarten.UI.GraphicsUI;
 import irrgarten.UI.TextUI;
 import irrgarten.controller.Controller;
 
@@ -18,7 +19,7 @@ public class Main {
        
         Game juego = new Game(2);
     
-        TextUI text = new TextUI ();
+        GraphicsUI text = new GraphicsUI ();
     
         Controller controlo = new Controller(juego, text);
     

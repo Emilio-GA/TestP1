@@ -32,13 +32,13 @@ public class GraphicsUI extends javax.swing.JFrame {
         
         this.labyrinthArea.setText(gs.getLabyrinthv());
         
-        this.playersArea.setText(gs.getCurrentPlayer());
+        this.playerArea.setText(Integer.toString(gs.getCurrentPlayer()));
               
         this.logArea.setText(gs.getLog());
 
         this.monsterArea.setText(gs.getMonsters());
         
-        this.currentPlayer.setText(Integer.toString(gs.getCurrentPlayer());
+        this.currentPlayer.setText(Integer.toString(gs.getCurrentPlayer()));
   
                 
         repaint();
@@ -52,17 +52,77 @@ public class GraphicsUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        winner = new javax.swing.JLabel();
+        currentPlayer = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        monsterArea = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        logArea = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        labyrinthArea = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        playerArea = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        winner.setText("Winner");
+
+        currentPlayer.setText("CurrentPlayer: ");
+
+        monsterArea.setColumns(20);
+        monsterArea.setRows(5);
+        jScrollPane1.setViewportView(monsterArea);
+
+        logArea.setColumns(20);
+        logArea.setRows(5);
+        jScrollPane2.setViewportView(logArea);
+
+        labyrinthArea.setColumns(20);
+        labyrinthArea.setRows(5);
+        jScrollPane3.setViewportView(labyrinthArea);
+
+        playerArea.setColumns(20);
+        playerArea.setRows(5);
+        jScrollPane4.setViewportView(playerArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(currentPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(winner, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(133, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGap(39, 39, 39)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(currentPlayer)
+                        .addGap(32, 32, 32)
+                        .addComponent(winner))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -71,5 +131,15 @@ public class GraphicsUI extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel currentPlayer;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea labyrinthArea;
+    private javax.swing.JTextArea logArea;
+    private javax.swing.JTextArea monsterArea;
+    private javax.swing.JTextArea playerArea;
+    private javax.swing.JLabel winner;
     // End of variables declaration//GEN-END:variables
 }

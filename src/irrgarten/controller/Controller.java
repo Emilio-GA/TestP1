@@ -9,6 +9,7 @@ public class Controller {
     
     private Game game;
     private TextUI view;
+    //private GraphicsUI view;
     
     public Controller(Game game, TextUI view) {
         this.game = game;

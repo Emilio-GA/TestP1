@@ -26,8 +26,8 @@ public abstract class LabyrinthCharacter {
         intelligence = _intelligence;
         strength = _strength;
         health = _health;
-        row = 0;
-        col = 0;        
+        row = -1;
+        col = -1;        
     }
     
     public LabyrinthCharacter(LabyrinthCharacter other) {
@@ -81,7 +81,7 @@ public abstract class LabyrinthCharacter {
     
     public String toString() {
         
-        return "Player[ "+ name +", Intelligence: " + String.valueOf(intelligence) + 
+        return name +", Intelligence: " + String.valueOf(intelligence) + 
         ", Strength: " + String.valueOf(strength) + ", Health: " + String.valueOf(health) +
         ", Row and Col " + Integer.toString(row) + ", " + Integer.toString(col) + " ]";
         

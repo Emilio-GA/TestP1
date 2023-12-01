@@ -52,4 +52,9 @@ public class Monster extends LabyrinthCharacter {
         
         return isDead;   
     }
+    
+    public String toString() {
+        
+    return "Monster[ " +  super.toString();
+    }
 }

@@ -95,6 +95,7 @@ public class Player extends LabyrinthCharacter {
         
         this.resetHits();
         this.setHealth(INITIAL_HEALTH);
+        
 
         weapons.clear();
         shields.clear();
@@ -178,7 +179,7 @@ public class Player extends LabyrinthCharacter {
     // METODO TOSTRING
     public String toString() {
         
-        return super.toString() + ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) 
+        return "Player[ "+  super.toString() + ", ConsecutiveHits: "+ Integer.toString(consecutiveHits) 
         + ", Shields: " +stringShields() + ", Weapons: " +stringWeapons() +  " ]";
     }
     

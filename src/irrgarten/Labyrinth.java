@@ -141,7 +141,7 @@ public class Labyrinth {
 
             for (int j = 0; j  < nCols; j++) {
 
-                s += labyrinth[i][j] + " ";
+                s += labyrinth[i][j] + "     ";
             }
             
             s += "\n";

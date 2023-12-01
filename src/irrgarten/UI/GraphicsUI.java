@@ -12,7 +12,7 @@ import javax.swing.JFrame;
  *
  * @author egalv
  */
-public class GraphicsUI extends javax.swing.JFrame {
+public class GraphicsUI extends JFrame {
     private Cursors cursores;
     
     /**

@@ -7,7 +7,7 @@ import irrgarten.*;
 import java.util.Scanner;
 
 
-public class TextUI {
+public class TextUI implements UI{
     
     private static final Scanner in = new Scanner(System.in);
     

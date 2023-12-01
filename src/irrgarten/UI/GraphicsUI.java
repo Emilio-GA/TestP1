@@ -12,7 +12,7 @@ import javax.swing.JFrame;
  *
  * @author egalv
  */
-public class GraphicsUI extends JFrame {
+public class GraphicsUI extends JFrame implements UI{
     private Cursors cursores;
     
     /**
@@ -33,7 +33,7 @@ public class GraphicsUI extends JFrame {
         
         this.labyrinthArea.setText(gs.getLabyrinthv());
         
-        this.playerArea.setText(Integer.toString(gs.getCurrentPlayer()));
+        this.playerArea.setText(gs.getPlayers());
               
         this.logArea.setText(gs.getLog());
 

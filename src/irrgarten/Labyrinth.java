@@ -78,8 +78,8 @@ public class Labyrinth {
         this.nCols = nCols;
         //this.exitRow = exitRow;
         //this.exitCol = exitCol;
-        this.exitRow = 1;
-        this.exitCol = 1;
+        this.exitRow = exitRow;
+        this.exitCol = exitCol;
         
         
         monsters = new Monster[nRows][nCols];

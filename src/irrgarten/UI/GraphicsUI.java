@@ -23,10 +23,11 @@ public class GraphicsUI extends JFrame {
         setVisible(true);
         cursores = new Cursors(this, true);
     }
+    //@Override
     public Directions nextMove(){
         return cursores.getDirection();
     }
-    
+    //@Override
     public void showGame(GameState gs){
         this.winner.setVisible(gs.getWinner());
         

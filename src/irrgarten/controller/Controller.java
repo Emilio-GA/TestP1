@@ -9,8 +9,8 @@ import irrgarten.UI.GraphicsUI;
 public class Controller {
     
     private Game game;
-    //private TextUI view;
     private GraphicsUI view;
+    //private GraphicsUI view;
     
     public Controller(Game game, GraphicsUI view) {
         this.game = game;

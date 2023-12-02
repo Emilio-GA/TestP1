@@ -6,7 +6,6 @@ package main;
 import irrgarten.Game;
 import irrgarten.UI.GraphicsUI;
 import irrgarten.UI.UI;
-import irrgarten.UI.TextUI;
 import irrgarten.controller.Controller;
 
 /**

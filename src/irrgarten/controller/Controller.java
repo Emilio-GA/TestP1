@@ -1,3 +1,8 @@
+/**
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
+ */
+
 package irrgarten.controller;
 
 import irrgarten.Directions;

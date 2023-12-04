@@ -1,8 +1,11 @@
+/**
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
+ */
 
 package irrgarten.UI;
 
 import irrgarten.Directions;
-//import irrgarten.GameState;
 import irrgarten.*;
 import java.util.Scanner;
 
@@ -75,5 +78,7 @@ public class TextUI implements UI{
         System.out.println("Hay ganador ");
  
         System.out.println( gameState.getWinner() );
+        
+        // repaint();
     }
 }

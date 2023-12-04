@@ -9,26 +9,33 @@ import irrgarten.GameState;
 import javax.swing.JFrame;
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
+// CLASE GRAPHICSUI
 public class GraphicsUI extends JFrame implements UI{
+    
     private Cursors cursores;
     
-    /**
-     * Creates new form GraphicsUI
-     */
+    
     public GraphicsUI() {
+        
         initComponents();
         setVisible(true);
         cursores = new Cursors(this, true);
     }
-    //@Override
+
+    
+    @Override
     public Directions nextMove(){
         return cursores.getDirection();
     }
-    //@Override
+
+    
+    @Override
     public void showGame(GameState gs){
+        
         this.winner.setVisible(gs.getWinner());
         
         this.labyrinthArea.setText(gs.getLabyrinthv());
@@ -40,10 +47,11 @@ public class GraphicsUI extends JFrame implements UI{
         this.monsterArea.setText(gs.getMonsters());
         
         this.currentPlayer.setText(Integer.toString(gs.getCurrentPlayer()));
-  
-                
+      
         repaint();
     }
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

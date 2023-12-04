@@ -10,13 +10,18 @@ import javax.swing.JFrame;
         
 
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
+// CLASE CURSORS
 public class Cursors extends JDialog {
     private Directions dir;
+    
     /**
      * Creates new form Cursors
+     * @param parent
+     * @param modal
      */
     public Cursors(JFrame parent, boolean modal) {
         super(parent, modal);
@@ -27,8 +32,6 @@ public class Cursors extends JDialog {
     public Directions getDirection(){
         setVisible(true);
         return dir;
-        
-        
     }
 
     /**

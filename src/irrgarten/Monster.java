@@ -55,6 +55,6 @@ public class Monster extends LabyrinthCharacter {
     
     public String toString() {
         
-    return "Monster[ " +  super.toString();
+    return "Monster [" +  super.toString() + "]";
     }
 }

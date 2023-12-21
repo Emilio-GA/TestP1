@@ -6,7 +6,6 @@ package main;
 import irrgarten.Game;
 import irrgarten.UI.GraphicsUI;
 import irrgarten.UI.UI;
-import irrgarten.UI.TextUI;
 import irrgarten.controller.Controller;
 
 /**
@@ -21,11 +20,10 @@ public class Main {
         Game juego = new Game(2);
     
         UI text = new GraphicsUI ();
-//        UI text = new TextUI ();
+        // UI text = new TextUI ();
     
         Controller controlo = new Controller(juego, text);
     
         controlo.play();
-        
     }
 }

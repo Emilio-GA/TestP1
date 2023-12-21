@@ -32,6 +32,6 @@ public class Shield extends CombatElement {
      // MÉTODO QUE DA LA PROTECCION Y LOS USOS QUE TENDRÁ UN ESCUDO EN FORMATO TEXTO
     public String toString(){        
         
-        return "S[ protection " + super.toString();
+        return "S " + super.toString();
     }
 }

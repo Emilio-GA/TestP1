@@ -5,12 +5,16 @@
 package irrgarten.UI;
 import irrgarten.Directions;
 import irrgarten.GameState;
+
+
 /**
- *
- * @author egalv
+ * @author Alberto Rodriguez Fernandez
+ * @author Emilio Guillen Alvarez
  */
+
+// INTERFAZ UI
 public interface UI {
+    
     public Directions nextMove();
     public void showGame(GameState gs);
-    
 }

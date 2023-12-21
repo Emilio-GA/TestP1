@@ -121,9 +121,9 @@ public class Game {
     private void configureLabyrinth() {
         
        // Monstruos
-      Monster m1 = new Monster("m1", Dice.randomIntelligence(), Dice.randomStrength());
-      Monster m2 = new Monster("m2", Dice.randomIntelligence(), Dice.randomStrength());
-       Monster m3 = new Monster("m3", Dice.randomIntelligence(), Dice.randomStrength());
+      Monster m1 = new Monster("m1", 100,100);
+      Monster m2 = new Monster("m2", 100,100);
+       Monster m3 = new Monster("m3", 100,100);
        Monster m4 = new Monster("m4", Dice.randomIntelligence(), Dice.randomStrength());
     
        // Guardar monstruos en laberinto 

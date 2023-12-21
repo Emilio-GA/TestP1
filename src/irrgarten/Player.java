@@ -24,7 +24,7 @@ public class Player extends LabyrinthCharacter {
     
     
     // SALUD INICIAL
-    private static final int INITIAL_HEALTH = 10;
+    private static final int INITIAL_HEALTH = 1;
     
     
     // GOLPES ANTES DE PERDER

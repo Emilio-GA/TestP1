@@ -225,6 +225,7 @@ public class Game {
     
     // METODO MANAGERESURRECTION
     private void manageResurrection() {
+        
         boolean resurrect= Dice.resurrectPlayer();
         
         if (resurrect){

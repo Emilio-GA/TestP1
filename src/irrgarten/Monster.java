@@ -22,7 +22,6 @@ public class Monster extends LabyrinthCharacter {
     // CONSTRUCTOR
     public Monster (String name, float intelligence, float strength){
         
-        // TO-DO: esa salud es correcta
         super(name, intelligence, strength, INITIAL_HEALTH);
     }
     
